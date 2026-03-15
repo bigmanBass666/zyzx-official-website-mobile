@@ -3,9 +3,16 @@ Project: 中医智行移动端官网重构
 Started: 2025-03-15 21:30
 Granularity: medium (中粒度 - 按页面/模块拆分)
 Execution Mode: complete_all (自动循环完成)
-Tech Stack: HTML5 + CSS3 + Vanilla JS + Vite
+Tech Stack: HTML5 + CSS3 (原生) + Vanilla JavaScript + Vite
 Total Features: 21
 Source Design: sketch_extract/pages/*.json
+
+⚠️ ⚠️ ⚠️  移动端专有项目 (MOBILE-ONLY)  ⚠️ ⚠️ ⚠️
+- 所有页面只在移动端展示（390x844 为主视口）
+- 使用移动端 TabBar 导航（底部固定）
+- 触摸友好设计（最小 44x44px 点击区域）
+- E2E 测试必须使用移动端视口
+- 不要为桌面端设计！
 
 === Session History ===
 
@@ -51,8 +58,26 @@ Session 1 - Initializer (2025-03-15 21:30)
   - E2E verified: all elements render correctly on mobile viewport
   - Commit: 1c77091
 
-Progress: 3/21 features completed (14.3%)
-Next: Feature #4 - Login & Onboarding pages
+✅ Feature #4: Login & Onboarding - COMPLETED (f72fa11)
+  - Created login.html with form validation
+  - Created onboarding.html with skip functionality
+  - Token-based auth in localStorage
+  - E2E verified login flow
+  - Commit: f72fa11
+
+Progress: 4/21 features completed (19.0%)
+Next: Feature #5 - Healthy Page
+
+=== Session 3 - Feature #5 (2025-03-15 23:??) ===
+✅ Feature #5: 健康页 - COMPLETED (IN PROGRESS)
+  - Created html/healthy.html with correct structure (Tabs + News + Lecture + QA)
+  - Implemented category filtering (全部/调理/医院/药品/疾病/指南)
+  - Health lecture expandable card with smooth animation
+  - Health Q&A card with gradient styling
+  - Active TabBar highlighting (健康高亮)
+  - E2E verified: Tab switching works, lecture expands/collapses, no errors
+  - Files: css/healthy.css, js/healthy.js
+  - Status: Ready to commit
 
 === Notes ===
 - 每次会话必须阅读此文件以了解进度

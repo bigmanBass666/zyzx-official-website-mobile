@@ -8,7 +8,14 @@
     "tech_stack": "HTML5 + CSS3 (原生) + Vanilla JavaScript + Vite (dev server)",
     "total_features": 21,
     "created": "2025-03-15T21:30:00",
-    "design_system_source": "sketch_extract/pages/eFRVuNK-h4GYJi-EUH71B.json + 8_1.json"
+    "design_system_source": "sketch_extract/pages/eFRVuNK-h4GYJi-EUH71B.json + 8_1.json",
+    "platform": "mobile-only",
+    "mobile_constraints": {
+      "target_viewport": "390x844",
+      "navigation": "bottom-tabbar",
+      "touch_friendly": true,
+      "no_desktop_layout": true
+    }
   },
   "features": [
     {
