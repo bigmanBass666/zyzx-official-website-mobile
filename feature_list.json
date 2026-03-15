@@ -24,7 +24,7 @@
         "创建 js/main.js 作为模块入口",
         "E2E test: 使用移动端视口(390x844)打开首页，验证 CSS 变量生效，设计系统基础样式正常，无 Bootstrap 依赖"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@
         "测试开发服务器启动和热更新",
         "E2E test: 启动服务器，访问 http://localhost:5173 显示首页"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,
