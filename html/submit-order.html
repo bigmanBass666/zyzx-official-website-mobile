@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>提交订单 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/submit-order.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部导航 -->
+    <header class="location-bar">
+      <button class="nav-btn back-btn" aria-label="返回" onclick="window.history.back()">
+        <i class="iconfont icon-arrow-left"></i>
+      </button>
+      <div class="title">确认订单</div>
+      <button class="nav-btn more-btn" aria-label="更多">
+        <i class="iconfont icon-more"></i>
+      </button>
+    </header>
+
+    <!-- 收货地址 -->
+    <section class="address-section">
+      <div class="address-card">
+        <div class="address-header">
+          <div class="consignee">
+            <span class="name">张三</span>
+            <span class="phone">138****5678</span>
+          </div>
+          <span class="tag">默认</span>
+        </div>
+        <div class="address-detail">
+          广东省云浮市云城区xx路xx号xx小区xx栋xx室
+        </div>
+        <div class="address-actions">
+          <button class="btn-edit">修改</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品信息 -->
+    <section class="products-section">
+      <div class="section-header">
+        <p class="title">商品信息</p>
+        <a href="#" class="shop-name">
+          <i class="iconfont icon-shop"></i>
+          <span>中医智行官方旗舰店</span>
+          <i class="iconfont icon-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="product-list">
+        <div class="product-item">
+          <img src="/img/products/product1.png" alt="当归" class="product-image">
+          <div class="product-info">
+            <p class="product-name">精选当归 中药材 补血活血 调经止痛</p>
+            <p class="product-spec">250g 标准装</p>
+            <div class="product-bottom">
+              <p class="product-price">¥58.00</p>
+              <p class="product-quantity">x2</p>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="/img/products/product2.png" alt="枸杞" class="product-image">
+          <div class="product-info">
+            <p class="product-name">宁夏枸杞 特级 免洗 泡水泡酒</p>
+            <p class="product-spec">500g 大包装</p>
+            <div class="product-bottom">
+              <p class="product-price">¥68.00</p>
+              <p class="product-quantity">x1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 配送信息 -->
+    <section class="delivery-section">
+      <div class="section-header">
+        <p class="title">配送方式</p>
+      </div>
+      <div class="delivery-options">
+        <div class="delivery-option active">
+          <div class="option-left">
+            <i class="iconfont icon-express"></i>
+            <span class="option-name">快递配送</span>
+          </div>
+          <div class="option-right">
+            <span class="option-desc">快递免运费（预计 2-3 天送达）</span>
+            <i class="iconfont icon-check-circle"></i>
+          </div>
+        </div>
+        <div class="delivery-option">
+          <div class="option-left">
+            <i class="iconfont icon-store"></i>
+            <span class="option-name">到店自提</span>
+          </div>
+          <div class="option-right">
+            <span class="option-desc">选择自提门店</span>
+            <i class="iconfont icon-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-time">
+        <span class="label">配送时间</span>
+        <div class="time-selector">
+          <button class="time-option active">不限</button>
+          <button class="time-option">工作日</button>
+          <button class="time-option">周末</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 发票信息 -->
+    <section class="invoice-section">
+      <div class="section-header">
+        <p class="title">发票信息</p>
+      </div>
+      <div class="invoice-options">
+        <div class="invoice-option active" data-type="none">
+          <span class="option-text">不开发票</span>
+          <i class="iconfont icon-check-circle"></i>
+        </div>
+        <div class="invoice-option" data-type="personal">
+          <span class="option-text">个人发票</span>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="invoice-option" data-type="company">
+          <span class="option-text">公司发票</span>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- 优惠券 -->
+    <section class="coupon-section">
+      <div class="section-header">
+        <p class="title">优惠券</p>
+      </div>
+      <div class="coupon-list">
+        <div class="coupon-item">
+          <div class="coupon-left">
+            <span class="coupon-amount">¥20</span>
+            <span class="coupon-condition">满100可用</span>
+          </div>
+          <div class="coupon-right">
+            <p class="coupon-name">新用户专享券</p>
+            <p class="coupon-time">有效期至 2025-12-31</p>
+          </div>
+          <button class="btn-claim">立即领取</button>
+        </div>
+        <div class="coupon-item">
+          <div class="coupon-left">
+            <span class="coupon-amount">¥10</span>
+            <span class="coupon-condition">无门槛</span>
+          </div>
+          <div class="coupon-right">
+            <p class="coupon-name">全场通用券</p>
+            <p class="coupon-time">有效期至 2025-06-30</p>
+          </div>
+          <button class="btn-claimed">已领取</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 价格明细 -->
+    <section class="price-section">
+      <div class="section-header">
+        <p class="title">价格明细</p>
+      </div>
+      <div class="price-list">
+        <div class="price-item">
+          <span class="price-label">商品总价</span>
+          <span class="price-value">¥264.00</span>
+        </div>
+        <div class="price-item">
+          <span class="price-label">运费</span>
+          <span class="price-value">¥0.00</span>
+        </div>
+        <div class="price-item highlight">
+          <span class="price-label">优惠券</span>
+          <span class="price-value discount">-¥20.00</span>
+        </div>
+        <div class="price-item total">
+          <span class="price-label">实付金额</span>
+          <span class="price-value">¥244.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部占位 -->
+    <div class="bottom-placeholder"></div>
+  </main>
+
+  <!-- 底部提交栏 -->
+  <footer class="submit-bar">
+    <div class="summary-info">
+      <span class="label">实付金额：</span>
+      <span class="total-price">¥244.00</span>
+    </div>
+    <button class="btn-submit" id="submitBtn">提交订单</button>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/submit-order.js"></script>
+</body>
+
+</html>
