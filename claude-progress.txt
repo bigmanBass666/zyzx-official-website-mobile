@@ -68,8 +68,8 @@ Session 1 - Initializer (2025-03-15 21:30)
 Progress: 4/21 features completed (19.0%)
 Next: Feature #5 - Healthy Page
 
-=== Session 3 - Feature #5 (2025-03-15 23:??) ===
-✅ Feature #5: 健康页 - COMPLETED (IN PROGRESS)
+=== Session 3 - Feature #5 (2025-03-15 23:20) ===
+✅ Feature #5: 健康页 - COMPLETED
   - Created html/healthy.html with correct structure (Tabs + News + Lecture + QA)
   - Implemented category filtering (全部/调理/医院/药品/疾病/指南)
   - Health lecture expandable card with smooth animation
@@ -77,7 +77,13 @@ Next: Feature #5 - Healthy Page
   - Active TabBar highlighting (健康高亮)
   - E2E verified: Tab switching works, lecture expands/collapses, no errors
   - Files: css/healthy.css, js/healthy.js
-  - Status: Ready to commit
+  - Commit: 7003580
+  - Created PROJECT_CONSTRAINTS.md to document mobile-only requirement
+
+Progress: 5/21 features completed (23.8%)
+Next: Feature #6 - Mall Homepage (商城首页)
+
+=== Session End - Ready for Next ===
 
 === Notes ===
 - 每次会话必须阅读此文件以了解进度
