@@ -1,0 +1,103 @@
+// 设计系统令牌 - 从 Sketch 设计稿提取
+:root {
+  // 主色系（基于设计稿提取的核心颜色）
+  --primary: #007AFF;           // iOS 蓝色 (高频使用)
+  --primary-light: #5ac8fa;
+  --primary-dark: #0062cc;
+
+  // 文字颜色
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-placeholder: #cccccc;
+  --text-white: #ffffff;
+
+  // 背景颜色
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #eeeeee;
+
+  // 语义化颜色
+  --success: #34ad96;
+  --warning: #ffb900;
+  --error: #ff5555;
+  --info: #2b77ef;
+
+  // 圆角
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  // 阴影
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  // 间距（基于 4px 网格）
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  // 字体大小
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-xxl: 32px;
+
+  // 字体行高
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-loose: 1.8;
+
+  // 过渡
+  --transition-fast: 0.15s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+
+  // Z-index 层级
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+// 响应式断点（基于设计稿尺寸）
+$breakpoints: (
+  'xs': 0,
+  'sm': 360px,
+  'md': 375px,
+  'lg': 768px,
+  'xl': 1024px
+);
+
+// 断点 Mixin
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $breakpoints.";
+  }
+}
+
+// 移动端专用（小于 768px）
+@mixin mobile-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// 桌面端
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
