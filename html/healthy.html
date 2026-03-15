@@ -3,333 +3,167 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>健康咨询</title>
-
-  <!-- bootstrap.css -->
-  <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.css">
 
   <!-- 字体图标 -->
   <link rel="stylesheet" href="/iconfont/iconfont.css">
 
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/common.css">
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/healthy.css">
 
   <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
     type="image/x-icon">
 </head>
 
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <!-- left -->
-    <a class="navbar-brand" href="/index.html">
-      <img src="/img/logo_white.png" alt="...">
-    </a>
-
-    <!-- 药房 -->
-    <a href="#" class="pharmacyBtn">
-      <i class="iconfont icon-pharmacy"></i>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部定位栏 -->
+    <header class="location-bar">
       <div class="location">
-        <span class="pharmacy-text">云浮</span>
+        云浮
         <i class="iconfont icon-arrow-down-fill"></i>
       </div>
-    </a>
+      <img src="/img/logo_white.png" alt="中医智行" class="brand" style="height: 24px;">
+    </header>
 
-    <!-- middle -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">首页</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/html/mall.html">商城</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/html/healthy.html">健康</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/html/community.html">社区</a>
-      </li>
-    </ul>
+    <!-- 搜索区域 -->
+    <section class="search-section">
+      <div class="search-box-wrapper">
+        <i class="iconfont icon-search search-icon"></i>
+        <input type="text" class="search-input" placeholder="搜索医院或药品">
+        <i class="iconfont icon-msg msg-icon"></i>
+      </div>
+    </section>
 
-    <!-- right -->
-    <div class="navbar-right">
-      <form role="search">
-        <input id="search" class="" type="search" placeholder="搜索医院或药品" aria-label="搜索医院或药品">
-        <label for="search"><i class="iconfont icon-search"></i></label>
-      </form>
-      <!-- 个人 -->
-      <a href="#" class="personBtn"><i class="iconfont icon-person"></i></a>
-    </div>
-  </nav>
+    <!-- 健康资讯分类 Tabs -->
+    <section class="health-tabs">
+      <div class="tab-list">
+        <button class="tab-item active" data-category="全部">全部</button>
+        <button class="tab-item" data-category="调理">调理</button>
+        <button class="tab-item" data-category="医院">医院</button>
+        <button class="tab-item" data-category="药品">药品</button>
+        <button class="tab-item" data-category="疾病">疾病</button>
+        <button class="tab-item" data-category="指南">指南</button>
+      </div>
+    </section>
 
-  <div class="banner">
-    <div class="indicator">
-      <div class="left"></div>
-      <div class="middle active"></div>
-      <div class="right"></div>
-    </div>
-    <div class="imgBox">
-      <img src="/img/banner/banner2.png" alt="">
-    </div>
-  </div>
+    <!-- 健康资讯列表 -->
+    <section class="health-news-section">
+      <div class="news-list" id="newsList">
+        <article class="news-item" data-category="医院">
+          <h4 class="news-title">为什么会有大油头？如何应对</h4>
+          <p class="news-summary">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</p>
+          <div class="news-footer">
+            <span class="doctor-name">王森 - 深圳宝安区人民医院</span>
+          </div>
+        </article>
+        <article class="news-item" data-category="疾病">
+          <h4 class="news-title">每逢佳节血糖高，糖尿病患者如何让代谢稳定过大年</h4>
+          <p class="news-summary">糖尿病患者在佳节期间需要注意饮食控制，保持规律运动，确保血糖稳定。</p>
+          <div class="news-footer">
+            <span class="doctor-name">许向前 - 深圳宝安区人民医院</span>
+          </div>
+        </article>
+        <article class="news-item" data-category="药品">
+          <h4 class="news-title">小儿抽动症的中医治疗</h4>
+          <p class="news-summary">中医通过辨证施治，采用中药调理和心理疏导相结合的方式治疗小儿抽动症。</p>
+          <div class="news-footer">
+            <span class="doctor-name">李医生 - 儿童专科医院</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-
-  <!-- 版心 -->
-  <div class="container">
-    <!-- 智能问诊, 健康查询等 -->
-    <div class="tools">
-      <div class="header">
+    <!-- 健康讲堂 -->
+    <section class="health-lecture-section">
+      <div class="section-header">
+        <p class="title">健康讲堂</p>
         <a href="#" class="more">更多 <i class="iconfont icon-arrow-right"></i></a>
       </div>
-      <ul class="row">
-        <li class="tool-item znwz">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/znwz.png" alt="">
-            <p>智能问诊</p>
-          </a>
-        </li>
-        <li class="tool-item jkzx">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/jkzx.png" alt="">
-            <p>健康咨询</p>
-          </a>
-        </li>
-        <li class="tool-item znpf">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/znpf.png" alt="">
-            <p>智能配方</p>
-          </a>
-        </li>
-        <li class="tool-item znsb">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/znsb.png" alt="">
-            <p>智能识别</p>
-          </a>
-        </li>
-        <li class="tool-item bad yfjc">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/yfjc.png" alt="" class="">
-            <p>药方检测</p>
-          </a>
-        </li>
-        <li class="tool-item bad jkzc">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/jkzc.png" alt="" class="">
-            <p>健康自测</p>
-          </a>
-        </li>
-        <li class="tool-item bad smzs">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/smzs.png" alt="" class="">
-            <p>睡眠助手</p>
-          </a>
-        </li>
-        <li class="tool-item bad jbdt">
-          <a href="#" class="tool-link">
-            <img src="/img/tool/jbdt.png" alt="" class="">
-            <p>疾病动态</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- 预约挂号, 线下预约等 -->
-    <div class="appointment">
-      <ul class="row">
-        <li class="appointment-item">
-          <a href="#" class="appointment-link">
-            <img src="/img/appointment/yygh-bg.png" class="bg" alt="">
-            <p class="title">预约挂号</p>
-            <p class="description">节约时间</p>
-            <a href="#" class="goto">立即咨询</a>
-            <i><img src="/img/appointment/yygh-icon.png" class="icon" id="yygh-icon" alt=""></i>
-          </a>
-        </li>
-        <li class="appointment-item">
-          <a href="#" class="appointment-link">
-            <img src="/img/appointment/xxyy-bg.png" class="bg" alt="">
-            <p class="title">线下预约</p>
-            <p class="description">精准治疗</p>
-            <a href="#" class="goto">立即咨询</a>
-            <i><img src="/img/appointment/xxyy-icon.png" class="icon" id="xxyy-icon" alt=""></i>
-          </a>
-        </li>
-        <li class="appointment-item">
-          <a href="#" class="appointment-link">
-            <img src="/img/appointment/zjjj-bg.png" class="bg" alt="">
-            <p class="title">专家讲解</p>
-            <p class="description">知识拓宽</p>
-            <a href="#" class="goto">立即咨询</a>
-            <i><img src="/img/appointment/zjjj-icon.png" class="icon" id="zjjj-icon" alt=""></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- 推荐医生 -->
-    <div class="recommend-doctor">
-      <div class="header">
-        <p>推荐医生<i class="iconfont icon-doctor"></i></p>
-        <a href="#" class="more">更多 <i class="iconfont icon-arrow-right"></i></a>
+      <div class="lecture-card" id="lectureCard">
+        <div class="lecture-header" id="lectureHeader">
+          <div class="lecture-content">
+            <h5 class="lecture-title">身体更健康</h5>
+            <p class="lecture-desc">中医养生，从日常做起，让身体更健康...</p>
+          </div>
+          <i class="iconfont icon-arrow-down" id="lectureArrow"></i>
+        </div>
+        <div class="lecture-body" id="lectureBody" style="display: none;">
+          <div class="lecture-text">
+            <p>中医养生理念强调"治未病"，通过合理的饮食、适当的运动、良好的作息和情志调节，可以达到预防疾病、保持健康的目的。</p>
+            <p>建议每天保持30分钟的适度运动，如太极拳、八段锦等传统养生功法，有助于气血流通，增强体质。</p>
+          </div>
+          <a href="#" class="lecture-cta">查看详情</a>
+        </div>
       </div>
-      <div class="body">
-        <ul>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">江园园</div>
-                  <div class="department">主任医师 | 妇科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
-                  失调疾病，复发性流产，妇科炎性疾病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">林青鸿</div>
-                  <div class="department">主任中医师 | 针灸科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">运用针灸及中药治疗颈椎病，腰腿痛，膝关节疼痛，
-                  带状疱疹神经痛，头痛头晕病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">江园园</div>
-                  <div class="department">主任医师 | 妇科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
-                  失调疾病，复发性流产，妇科炎性疾病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">林青鸿</div>
-                  <div class="department">主任中医师 | 针灸科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">运用针灸及中药治疗颈椎病，腰腿痛，膝关节疼痛，
-                  带状疱疹神经痛，头痛头晕病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">江园园</div>
-                  <div class="department">主任医师 | 妇科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
-                  失调疾病，复发性流产，妇科炎性疾病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">林青鸿</div>
-                  <div class="department">主任中医师 | 针灸科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">运用针灸及中药治疗颈椎病，腰腿痛，膝关节疼痛，
-                  带状疱疹神经痛，头痛头晕病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">江园园</div>
-                  <div class="department">主任医师 | 妇科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
-                  失调疾病，复发性流产，妇科炎性疾病...</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <div class="name">林青鸿</div>
-                  <div class="department">主任中医师 | 针灸科</div>
-                </h5>
-                <div class="secondary-title">
-                  <img class="score" src="/img/recommend-doctor/stars.png"></img>
-                  <div class="visit-time"><span>3600</span>次接诊</div>
-                </div>
-                <p class="speciality">运用针灸及中药治疗颈椎病，腰腿痛，膝关节疼痛，
-                  带状疱疹神经痛，头痛头晕病...</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+    </section>
+
+    <!-- 健康问答入口 -->
+    <section class="health-qa-section">
+      <div class="qa-card">
+        <div class="qa-icon">
+          <i class="iconfont icon-qa"></i>
+        </div>
+        <div class="qa-content">
+          <h5 class="qa-title">健康问答</h5>
+          <p class="qa-desc">有问题？向专家咨询</p>
+        </div>
+        <div class="qa-arrow">
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
       </div>
+    </section>
+
+    <!-- 版权信息 -->
+    <div class="copyright">
+      copyright © M&T developed by
+      <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
+        Jason Liu <i class="iconfont icon-gitee"></i>
+      </a>
     </div>
-  </div>
+  </main>
 
+  <!-- 底部导航 -->
+  <ul class="tabBar">
+    <li class="tabBar-item">
+      <a href="/index.html">
+        <i class="iconfont icon-home"></i>
+        <p>首页</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/mall.html">
+        <i class="iconfont icon-mall"></i>
+        <p>商城</p>
+      </a>
+    </li>
+    <li class="tabBar-item active">
+      <a href="/html/healthy.html">
+        <i class="iconfont icon-healthy"></i>
+        <p>健康</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/community.html">
+        <i class="iconfont icon-communitygreen"></i>
+        <p>社区</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/mine.html">
+        <i class="iconfont icon-mine"></i>
+        <p>我的</p>
+      </a>
+    </li>
+  </ul>
 
-  <!-- 版权 -->
-  <div class="copyright">
-    copyright © M&T developed by
-    <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
-      Jason Liu <i class="iconfont icon-gitee"></i>
-    </a>
-  </div>
-
-
-
-  <script src="/js/flexible.js"></script>
-  <script src="/js/index.js"></script>
+  <!-- Scripts -->
+  <script type="module" src="/js/healthy.js"></script>
 </body>
 
 </html>

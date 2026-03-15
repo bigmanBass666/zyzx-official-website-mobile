@@ -67,7 +67,7 @@
         "添加登录状态管理（localStorage token 存储）",
         "E2E test: 输入测试账号密码，验证登录跳转；引导页点击跳过检查"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,
@@ -81,7 +81,7 @@
         "实现底部 TabBar 联动",
         "E2E test: 点击分类切换，验证列表更新效果"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 6,

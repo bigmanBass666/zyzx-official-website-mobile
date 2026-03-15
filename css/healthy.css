@@ -1,0 +1,333 @@
+/* 健康页面样式 - Healthy Page Styles */
+
+/* ========== 健康分类 Tabs ========== */
+.health-tabs {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color-light);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.tab-list {
+  display: flex;
+  overflow-x: auto;
+  padding: var(--space-3) var(--space-2);
+  gap: var(--space-2);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tab-item {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &.active {
+    color: var(--color-white);
+    background: var(--color-green);
+    font-weight: var(--font-medium);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* ========== 健康资讯列表 ========== */
+.health-news-section {
+  margin-bottom: var(--space-4);
+  background: var(--bg-card);
+}
+
+.news-list {
+  padding: 0 var(--space-4);
+}
+
+.news-item {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-color-light);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: var(--bg-secondary);
+    margin: 0 calc(-1 * var(--space-4));
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+.news-title {
+  font-size: var(--font-md);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: var(--space-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-summary {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doctor-name {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+/* ========== 健康讲堂卡片 ========== */
+.health-lecture-section {
+  margin-bottom: var(--space-4);
+  background: var(--bg-card);
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4);
+
+    .title {
+      font-size: var(--font-md);
+      font-weight: var(--font-semibold);
+      color: var(--text-primary);
+    }
+
+    .more {
+      font-size: var(--font-sm);
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 12px;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.lecture-card {
+  border-top: 1px solid var(--border-color-light);
+}
+
+.lecture-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background: var(--bg-secondary);
+  }
+}
+
+.lecture-content {
+  flex: 1;
+}
+
+.lecture-title {
+  font-size: var(--font-md);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.lecture-desc {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.lecture-header i {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-left: var(--space-3);
+  transition: transform var(--transition-fast);
+
+  &.expanded {
+    transform: rotate(180deg);
+  }
+}
+
+.lecture-body {
+  padding: 0 var(--space-4) var(--space-4);
+  background: var(--bg-secondary);
+  animation: slideDown var(--transition-normal);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lecture-text {
+  p {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.lecture-cta {
+  display: inline-block;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--color-green);
+  background: rgba(17, 194, 131, 0.1);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(17, 194, 131, 0.2);
+  }
+}
+
+/* ========== 健康问答卡片 ========== */
+.health-qa-section {
+  margin-bottom: var(--space-4);
+  padding: 0 var(--space-4);
+}
+
+.qa-card {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-dark) 100%);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(17, 194, 131, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(17, 194, 131, 0.4);
+  }
+}
+
+.qa-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-right: var(--space-4);
+
+  i {
+    font-size: 24px;
+  }
+}
+
+.qa-content {
+  flex: 1;
+
+  .qa-title {
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-1);
+  }
+
+  .qa-desc {
+    font-size: var(--font-sm);
+    opacity: 0.9;
+  }
+}
+
+.qa-arrow {
+  i {
+    font-size: 18px;
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+}
+
+/* ========== 底部版权 ========== */
+.copyright {
+  text-align: center;
+  padding: var(--space-6) var(--space-4) var(--space-20);
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+
+  a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* ========== 空状态（筛选无结果） ========== */
+.empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-4);
+
+  &.visible {
+    display: flex;
+  }
+
+  i {
+    font-size: 48px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-4);
+  }
+
+  p {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+  }
+}
+
+/* 隐藏分类匹配的资讯项（通过JS控制） */
+.news-item.hidden {
+  display: none;
+}
