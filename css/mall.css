@@ -1,0 +1,194 @@
+/* 商城样式 - Mall Page Styles */
+
+/* ========== 顶部定位栏（药店模式）========== */
+.pharmacy-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  i {
+    font-size: 18px;
+    margin-right: var(--space-2);
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+
+    .pharmacy-text {
+      max-width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    i {
+      font-size: 12px;
+      margin-left: 2px;
+    }
+  }
+}
+
+/* ========== 搜索框区（含个人图标）========== */
+.person-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+  margin-left: var(--space-3);
+}
+
+/* ========== 分类导航 ========== */
+.category-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4) var(--space-3);
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      .category-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-lg);
+        margin-bottom: var(--space-2);
+        object-fit: cover;
+        background: var(--bg-secondary);
+      }
+
+      p {
+        font-size: var(--font-xs);
+        color: var(--text-primary);
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ========== 今日推荐商品网格 ========== */
+.recommend-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+
+    .product-card {
+      background: var(--bg-page);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      .product-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background: var(--bg-gray-lighter);
+      }
+
+      .product-info {
+        padding: var(--space-2);
+
+        .product-name {
+          font-size: var(--font-xs);
+          color: var(--text-primary);
+          margin-bottom: var(--space-1);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .product-tag {
+          display: inline-block;
+          padding: 2px 6px;
+          font-size: 10px;
+          color: var(--color-white);
+          background: var(--color-primary);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-1);
+        }
+
+        .product-price {
+          font-size: var(--font-sm);
+          font-weight: var(--font-semibold);
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+/* ========== 优选药材横向滚动 ========== */
+.premium-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .horizontal-scroll {
+    display: flex;
+    gap: var(--space-3);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: var(--space-3);
+    padding-bottom: var(--space-2);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .premium-card {
+      flex-shrink: 0;
+      width: 120px;
+      background: var(--bg-page);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      .premium-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background: var(--bg-gray-lighter);
+      }
+
+      .premium-name {
+        padding: var(--space-2) var(--space-2) 0;
+        font-size: var(--font-xs);
+        color: var(--text-primary);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .premium-price {
+        padding: 0 var(--space-2) var(--space-2);
+        font-size: var(--font-sm);
+        font-weight: var(--font-semibold);
+        color: var(--color-primary);
+      }
+    }
+  }
+}
