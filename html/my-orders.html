@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我的订单 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/my-orders.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部定位栏 -->
+    <header class="location-bar">
+      <button class="back-btn" onclick="window.history.back()">
+        <i class="iconfont icon-arrow-left"></i>
+      </button>
+      <div class="title">我的订单</div>
+      <button class="search-btn">
+        <i class="iconfont icon-search"></i>
+      </button>
+    </header>
+
+    <!-- 订单状态 Tab -->
+    <section class="order-tabs">
+      <div class="tabs-nav">
+        <button class="tab-item active" data-status="all">全部</button>
+        <button class="tab-item" data-status="unpaid">待付款</button>
+        <button class="tab-item" data-status="unsent">待发货</button>
+        <button class="tab-item" data-status="unreceived">待收货</button>
+        <button class="tab-item" data-status="completed">已完成</button>
+        <button class="tab-item" data-status="review">待评价</button>
+      </div>
+    </section>
+
+    <!-- 订单列表 -->
+    <section class="orders-list">
+      <!-- 订单卡片示例（待付款状态） -->
+      <article class="order-card" data-status="unpaid">
+        <div class="order-header">
+          <span class="order-time">2025-03-15 14:30</span>
+          <span class="order-status status-unpaid">待付款</span>
+        </div>
+        <div class="order-body">
+          <div class="product-item">
+            <img src="/img/products/product1.png" alt="当归" class="product-image">
+            <div class="product-info">
+              <p class="product-name">精选当归 中药材</p>
+              <p class="product-spec">250g 标准装</p>
+              <div class="product-bottom">
+                <p class="product-price">¥58.00</p>
+                <p class="product-quantity">x1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-footer">
+          <div class="order-summary">
+            <span>共 1 件商品</span>
+            <span>合计：<strong>¥58.00</strong></span>
+          </div>
+          <div class="order-actions">
+            <button class="btn-action btn-secondary">去支付</button>
+            <button class="btn-action btn-secondary">取消订单</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 订单卡片示例（待发货状态） -->
+      <article class="order-card" data-status="unsent">
+        <div class="order-header">
+          <span class="order-time">2025-03-14 10:20</span>
+          <span class="order-status status-unsent">待发货</span>
+        </div>
+        <div class="order-body">
+          <div class="product-item">
+            <img src="/img/products/product2.png" alt="枸杞" class="product-image">
+            <div class="product-info">
+              <p class="product-name">宁夏枸杞 特级</p>
+              <p class="product-spec">500g 大包装</p>
+              <div class="product-bottom">
+                <p class="product-price">¥68.00</p>
+                <p class="product-quantity">x2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-footer">
+          <div class="order-summary">
+            <span>共 2 件商品</span>
+            <span>合计：<strong>¥136.00</strong></span>
+          </div>
+          <div class="order-actions">
+            <button class="btn-action btn-primary">提醒发货</button>
+            <button class="btn-action btn-secondary">申请退款</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 订单卡片示例（待收货状态） -->
+      <article class="order-card" data-status="unreceived">
+        <div class="order-header">
+          <span class="order-time">2025-03-12 16:45</span>
+          <span class="order-status status-unreceived">待收货</span>
+        </div>
+        <div class="order-body">
+          <div class="product-item">
+            <img src="/img/products/product3.png" alt="黄芪" class="product-image">
+            <div class="product-info">
+              <p class="product-name">黄芪 中药材</p>
+              <p class="product-spec">250g 标准装</p>
+              <div class="product-bottom">
+                <p class="product-price">¥45.00</p>
+                <p class="product-quantity">x3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-footer">
+          <div class="order-summary">
+            <span>物流：顺丰快递 已发货</span>
+            <span>合计：<strong>¥135.00</strong></span>
+          </div>
+          <div class="order-actions">
+            <button class="btn-action btn-primary">确认收货</button>
+            <button class="btn-action btn-secondary">查看物流</button>
+            <button class="btn-action btn-secondary">申请售后</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 订单卡片示例（已完成状态） -->
+      <article class="order-card" data-status="completed">
+        <div class="order-header">
+          <span class="order-time">2025-03-10 09:15</span>
+          <span class="order-status status-completed">已完成</span>
+        </div>
+        <div class="order-body">
+          <div class="product-item">
+            <img src="/img/products/product4.png" alt="人参" class="product-image">
+            <div class="product-info">
+              <p class="product-name">人参 吉林产</p>
+              <p class="product-spec">100g 精选装</p>
+              <div class="product-bottom">
+                <p class="product-price">¥128.00</p>
+                <p class="product-quantity">x1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-footer">
+          <div class="order-summary">
+            <span>订单号：20250310123456</span>
+            <span>合计：<strong>¥128.00</strong></span>
+          </div>
+          <div class="order-actions">
+            <button class="btn-action btn-secondary">再次购买</button>
+            <button class="btn-action btn-primary">去评价</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 订单卡片示例（待评���状态） -->
+      <article class="order-card" data-status="review">
+        <div class="order-header">
+          <span class="order-time">2025-03-08 13:20</span>
+          <span class="order-status status-review">待评价</span>
+        </div>
+        <div class="order-body">
+          <div class="product-item">
+            <img src="/img/products/product5.png" alt="金银花" class="product-image">
+            <div class="product-info">
+              <p class="product-name">金银花 晒干</p>
+              <p class="product-spec">200g 罐装</p>
+              <div class="product-bottom">
+                <p class="product-price">¥35.00</p>
+                <p class="product-quantity">x2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-footer">
+          <div class="order-summary">
+            <span>订单号：20250308123456</span>
+            <span>合计：<strong>¥70.00</strong></span>
+          </div>
+          <div class="order-actions">
+            <button class="btn-action btn-primary">去评价</button>
+            <button class="btn-action btn-secondary">追加评价</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 空状态（无订单时显示） -->
+    <section class="empty-state" style="display: none;">
+      <div class="empty-icon">
+        <i class="iconfont icon-empty-order"></i>
+      </div>
+      <p class="empty-text">暂无订单</p>
+      <button class="btn-go-mall">去商城逛逛</button>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/my-orders.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+/* 我的订单页样式 - My Orders Page Styles */
+
+/* ========== 顶部导航栏 ========== */
+.location-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-green);
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+
+  .back-btn,
+  .search-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background var(--transition-fast);
+
+    &:active {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  .title {
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ========== 订单状态 Tab ========== */
+.order-tabs {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color-light);
+  position: sticky;
+  top: 44px;
+  z-index: var(--z-sticky);
+
+  .tabs-nav {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 var(--space-2);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-item {
+      flex-shrink: 0;
+      padding: var(--space-3) var(--space-4);
+      background: none;
+      border: none;
+      font-size: var(--font-sm);
+      color: var(--text-secondary);
+      cursor: pointer;
+      position: relative;
+      transition: color var(--transition-fast);
+
+      &.active {
+        color: var(--color-primary);
+        font-weight: var(--font-semibold);
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 24px;
+          height: 3px;
+          background: var(--color-primary);
+          border-radius: 2px;
+        }
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+/* ========== 订单列表 ========== */
+.orders-list {
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  .order-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-color-light);
+
+    .order-time {
+      font-size: var(--font-xs);
+      color: var(--text-tertiary);
+    }
+
+    .order-status {
+      font-size: var(--font-xs);
+      font-weight: var(--font-medium);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+
+      &.status-unpaid {
+        color: var(--color-primary);
+        background: rgba(255, 107, 107, 0.1);
+      }
+
+      &.status-unsent {
+        color: var(--color-warning);
+        background: rgba(255, 193, 7, 0.1);
+      }
+
+      &.status-unreceived {
+        color: var(--color-info);
+        background: rgba(33, 150, 243, 0.1);
+      }
+
+      &.status-completed {
+        color: var(--text-secondary);
+        background: var(--bg-secondary);
+      }
+
+      &.status-review {
+        color: var(--color-success);
+        background: rgba(76, 175, 80, 0.1);
+      }
+    }
+  }
+
+  .order-body {
+    padding: var(--space-3) var(--space-4);
+
+    .product-item {
+      display: flex;
+      gap: var(--space-3);
+
+      .product-image {
+        width: 80px;
+        height: 80px;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        flex-shrink: 0;
+        background: var(--bg-gray-lighter);
+      }
+
+      .product-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+
+        .product-name {
+          font-size: var(--font-sm);
+          color: var(--text-primary);
+          margin-bottom: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .product-spec {
+          font-size: var(--font-xs);
+          color: var(--text-tertiary);
+          margin-bottom: var(--space-2);
+        }
+
+        .product-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-top: auto;
+
+          .product-price {
+            font-size: var(--font-md);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary);
+          }
+
+          .product-quantity {
+            font-size: var(--font-sm);
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  .order-footer {
+    padding: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--border-color-light);
+
+    .order-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-3);
+      font-size: var(--font-xs);
+      color: var(--text-secondary);
+
+      strong {
+        color: var(--text-primary);
+        font-weight: var(--font-semibold);
+      }
+    }
+
+    .order-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: var(--space-3);
+
+      .btn-action {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-xs);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: all var(--transition-fast);
+
+        &:active {
+          transform: scale(0.95);
+        }
+
+        &.btn-primary {
+          color: var(--color-white);
+          background: var(--color-primary);
+          border: none;
+        }
+
+        &.btn-secondary {
+          color: var(--text-primary);
+          background: var(--bg-card);
+          border: 1px solid var(--border-color);
+        }
+      }
+    }
+  }
+}
+
+/* ========== 空状态 ========== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-4);
+
+  .empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--space-4);
+
+    i {
+      font-size: 64px;
+      color: var(--text-tertiary);
+    }
+  }
+
+  .empty-text {
+    font-size: var(--font-md);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+  }
+
+  .btn-go-mall {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-sm);
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:active {
+      transform: scale(0.95);
+      opacity: 0.9;
+    }
+  }
+}
