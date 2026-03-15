@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>商品详情 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/product-detail.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部导航 -->
+    <header class="detail-nav">
+      <button class="nav-btn back-btn" aria-label="返回">
+        <i class="iconfont icon-arrow-left"></i>
+      </button>
+      <button class="nav-btn share-btn" aria-label="分享">
+        <i class="iconfont icon-share"></i>
+      </button>
+      <button class="nav-btn more-btn" aria-label="更多">
+        <i class="iconfont icon-more"></i>
+      </button>
+    </header>
+
+    <!-- 商品图片轮播 -->
+    <section class="product-gallery">
+      <div class="gallery-container">
+        <div class="gallery-track" id="galleryTrack">
+          <div class="gallery-slide active">
+            <img src="/img/products/detail/product-main.png" alt="商品主图">
+          </div>
+          <div class="gallery-slide">
+            <img src="/img/products/detail/product-detail1.png" alt="商品详情图1">
+          </div>
+          <div class="gallery-slide">
+            <img src="/img/products/detail/product-detail2.png" alt="商品详情图2">
+          </div>
+          <div class="gallery-slide">
+            <img src="/img/products/detail/product-detail3.png" alt="商品详情图3">
+          </div>
+        </div>
+      </div>
+      <div class="gallery-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </section>
+
+    <!-- 商品信息 -->
+    <section class="product-info">
+      <div class="price-row">
+        <div class="current-price">
+          <span class="symbol">¥</span>
+          <span class="amount">58.00</span>
+        </div>
+        <div class="original-price">
+          <span class="symbol">¥</span>
+          <span class="amount">88.00</span>
+        </div>
+        <div class="discount-badge">限时 6.6 折</div>
+      </div>
+
+      <h1 class="product-title">精选当归 中药材 补血活血 调经止痛 适用于血虚萎黄</h1>
+
+      <div class="product-stats">
+        <span class="stat-item">
+          <i class="iconfont icon-eye"></i>
+          <text>浏览 1280</text>
+        </span>
+        <span class="stat-item">
+          <i class="iconfont icon-order"></i>
+          <text>销量 358</text>
+        </span>
+        <span class="stat-item">
+          <i class="iconfont icon-comment"></i>
+          <text>评价 89</text>
+        </span>
+      </div>
+    </section>
+
+    <!-- 促销信息 -->
+    <section class="promo-section">
+      <div class="section-header">
+        <p class="title">促销活动</p>
+      </div>
+      <div class="promo-list">
+        <div class="promo-item">
+          <span class="promo-tag">满减</span>
+          <span class="promo-desc">满 100 减 20，满 200 减 50</span>
+        </div>
+        <div class="promo-item">
+          <span class="promo-tag">优惠券</span>
+          <span class="promo-desc">领取 10 元无门槛券</span>
+          <button class="btn-claim">领取</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 规格选择 -->
+    <section class="spec-section">
+      <div class="section-header">
+        <p class="title">选择规格</p>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">数量</span>
+        <div class="quantity-selector">
+          <button class="qty-btn minus" aria-label="减少数量">-</button>
+          <input type="number" class="qty-input" value="1" min="1" max="99" readonly>
+          <button class="qty-btn plus" aria-label="增加数量">+</button>
+        </div>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">规格</span>
+        <div class="spec-options">
+          <button class="spec-option active">250g 标准装</button>
+          <button class="spec-option">500g 大包装</button>
+          <button class="spec-option">1000g 家庭装</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品详情图文 -->
+    <section class="description-section">
+      <div class="section-header">
+        <p class="title">商品详情</p>
+      </div>
+      <div class="description-content">
+        <img src="/img/products/detail/description1.png" alt="商品详情图1" class="desc-image">
+        <img src="/img/products/detail/description2.png" alt="商品详情图2" class="desc-image">
+        <img src="/img/products/detail/description3.png" alt="商品详情图3" class="desc-image">
+      </div>
+    </section>
+
+    <!-- 用户评价 -->
+    <section class="review-section">
+      <div class="section-header">
+        <p class="title">用户评价 (89)</p>
+        <a href="#" class="more">查看全部 <i class="iconfont icon-arrow-right"></i></a>
+      </div>
+      <div class="review-list">
+        <div class="review-item">
+          <div class="review-user">
+            <img src="/img/avatar/user1.png" alt="用户头像" class="review-avatar">
+            <div class="review-user-info">
+              <p class="review-name">用户***A</p>
+              <div class="review-rating">
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+              </div>
+            </div>
+            <span class="review-date">2025-03-15</span>
+          </div>
+          <p class="review-text">当归质量很好，药香浓郁，发货速度快，会回购！</p>
+        </div>
+        <div class="review-item">
+          <div class="review-user">
+            <img src="/img/avatar/user2.png" alt="用户头像" class="review-avatar">
+            <div class="review-user-info">
+              <p class="review-name">用户***B</p>
+              <div class="review-rating">
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-filled"></i>
+                <i class="iconfont icon-star-half"></i>
+              </div>
+            </div>
+            <span class="review-date">2025-03-10</span>
+          </div>
+          <p class="review-text">包装精美，药材干净，值得推荐。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部占位 (为固定操作栏留空间) -->
+    <div class="bottom-placeholder"></div>
+  </main>
+
+  <!-- 底部操作栏 -->
+  <footer class="action-bar">
+    <div class="action-left">
+      <button class="action-icon-btn" id="customerServiceBtn">
+        <i class="iconfont icon-customer-service"></i>
+        <span>客服</span>
+      </button>
+      <button class="action-icon-btn" id="favoriteBtn">
+        <i class="iconfont icon-favorite"></i>
+        <span>收藏</span>
+      </button>
+      <button class="action-icon-btn" id="cartBtn">
+        <i class="iconfont icon-cart"></i>
+        <span>购物车</span>
+      </button>
+    </div>
+    <div class="action-right">
+      <button class="btn-add-cart">加入购物车</button>
+      <button class="btn-buy-now">立即购买</button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/product-detail.js"></script>
+</body>
+
+</html>
