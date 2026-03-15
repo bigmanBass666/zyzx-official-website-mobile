@@ -20,8 +20,9 @@
         "创建 css/variables.css 定义 CSS Custom Properties",
         "创建 css/base.css 实现重置和基础样式",
         "创建 css/components/ 目录和通用组件样式（按钮、卡片、输入框等）",
-        "更新 html/*.html 移除所有 Bootstrap 类名引用",
-        "E2E test: 打开首页，验证 CSS 变量生效，无 Bootstrap 依赖"
+        "更新 index.html 移除 Bootstrap 引用，引入 main.css",
+        "创建 js/main.js 作为模块入口",
+        "E2E test: 使用移动端视口(390x844)打开首页，验证 CSS 变量生效，设计系统基础样式正常，无 Bootstrap 依赖"
       ],
       "passes": false
     },

@@ -1,0 +1,16 @@
+/* 主样式表 - 设计系统入口 */
+
+/* 1. CSS 变量 */
+@import "variables.css";
+
+/* 2. 基础重置 */
+@import "base.css";
+
+/* 3. 通用组件 */
+@import "components/buttons.css";
+@import "components/cards.css";
+@import "components/forms.css";
+@import "components/navigation.css";
+@import "components/common.css";
+
+/* 4. 页面特定样式 - 按需在各页面 HTML 中单独引入 */

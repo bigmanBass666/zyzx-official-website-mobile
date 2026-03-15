@@ -1,93 +1,183 @@
-/* 把我们所有标签的内外边距清零 */
+/* 基础重置样式 - Design System Base */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    /* css3盒子模型 */
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* em 和 i 斜体的文字不倾斜 */
-em,
-i {
-    font-style: normal
+/* Remove default margin */
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* 去掉li 的小圆点 */
+/* Body defaults */
+body {
+  font-family: var(--font-family-base, "PingFang SC", "Helvetica Neue", Arial, sans-serif);
+  font-size: var(--font-md, 16px);
+  line-height: var(--leading-normal, 1.5);
+  color: var(--text-primary, #333333);
+  background-color: var(--bg-page, #f5f5f5);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove list styles */
+ul,
+ol,
 li {
-    list-style: none
+  list-style: none;
 }
 
-img {
-    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
-    border: 0;
-    /* 取消图片底侧有空白缝隙的问题 */
-    vertical-align: middle
+/* Images */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
+/* Form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
+/* Buttons */
 button {
-    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
-    cursor: pointer
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
+/* Links */
 a {
-    /* color: #666; */
-    /* color: var(--bs-body-color); */
-    color: inherit;
-    text-decoration: none
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-    color: inherit
+  color: inherit;
 }
 
-label {
-    cursor: pointer;
+/* Selection */
+::selection {
+  background-color: var(--color-primary, #007AFF);
+  color: var(--color-white, #ffffff);
 }
 
-input,
-button {
-    /* 去除input 按钮的默认样式 */
-    outline: none;
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #007AFF);
+  outline-offset: 2px;
 }
 
-button {
-    cursor: pointer;
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* 清除浮动 */
-.clearfix:after {
-    visibility: hidden;
-    clear: both;
-    display: block;
-    content: ".";
-    height: 0
-}
-
-.clearfix {
-    zoom: 1
-}
-
-
-body {
-    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
-    -webkit-font-smoothing: antialiased;
-
-}
-
+/* Utility classes */
 .hide,
 .none {
-    display: none
+  display: none !important;
 }
 
-/* 清除浮动 */
-.clearfix:after {
-    visibility: hidden;
-    clear: both;
-    display: block;
-    content: ".";
-    height: 0
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.clearfix {
-    zoom: 1
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Loading spinner */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page, #f5f5f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal, 300);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color, #e0e0e0);
+  border-top-color: var(--color-primary, #007AFF);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area insets for notched devices */
+.safe-area-top {
+  padding-top: var(--safe-area-inset-top, 0);
+}
+
+.safe-area-bottom {
+  padding-bottom: var(--safe-area-inset-bottom, 0);
 }

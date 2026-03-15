@@ -1,0 +1,178 @@
+/* 卡片组件样式 */
+
+.card {
+  background: var(--bg-card, #ffffff);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+
+  &.card-plain {
+    box-shadow: none;
+    border: 1px solid var(--border-color-light);
+  }
+}
+
+/* 卡片头部 */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-color-light);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-md);
+}
+
+/* 卡片主体 */
+.card-body {
+  padding: var(--space-4);
+}
+
+/* 卡片底部 */
+.card-footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--border-color-light);
+}
+
+/* 商品卡片 */
+.product-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: var(--bg-gray-lighter);
+  }
+
+  &-body {
+    padding: var(--space-3);
+  }
+
+  &-title {
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-price {
+    font-size: var(--font-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-red);
+
+    &::before {
+      content: "¥";
+      font-size: var(--font-xs);
+      margin-right: 1px;
+    }
+  }
+
+  &-sales {
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+    margin-left: var(--space-2);
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+
+    .tag {
+      font-size: 10px;
+      padding: 1px var(--space-2);
+      border-radius: var(--radius-sm);
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* 医生卡片 */
+.doctor-card {
+  display: flex;
+  padding: var(--space-4);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-3);
+
+  &-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--bg-gray-lighter);
+  }
+
+  &-info {
+    flex: 1;
+    margin-left: var(--space-3);
+  }
+
+  &-name {
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+  }
+
+  &-title {
+    font-size: var(--font-xs);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+  }
+
+  &-desc {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &-stats {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-2);
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+
+    .score {
+      width: 60px;
+      height: 12px;
+      margin-right: var(--space-2);
+    }
+  }
+
+  &-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: var(--space-3);
+
+    .btn {
+      font-size: var(--font-xs);
+      padding: var(--space-1) var(--space-3);
+    }
+  }
+}
