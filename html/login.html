@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>登录 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/auth.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <div class="auth-page">
+    <!-- 头部品牌区域 -->
+    <header class="auth-header">
+      <img src="/img/logo_black.png" alt="中医智行" class="logo">
+      <h1 class="title">欢迎使用中医智行</h1>
+      <p class="subtitle">基于人工智能的中医药智慧平台</p>
+    </header>
+
+    <!-- 登录表单 -->
+    <main class="auth-main">
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label class="form-label">账号</label>
+          <input type="text" class="input" id="account" placeholder="请输入手机号/用户名" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">密码</label>
+          <input type="password" class="input" id="password" placeholder="请输入密码" required>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox">
+            <input type="checkbox" id="agree">
+            <span>我已阅读并同意</span>
+            <a href="/html/todo.html" class="link">《用户隐私政策》</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">
+          登录
+        </button>
+
+        <div class="auth-footer">
+          <a href="/html/todo.html" class="link">忘记密码？</a>
+          <a href="/html/todo.html" class="link">注册新账号</a>
+        </div>
+      </form>
+
+      <!-- 其他登录方式 -->
+      <div class="other-login">
+        <p class="text">其他登录方式</p>
+        <div class="icons">
+          <a href="#" class="icon-btn"><i class="iconfont icon-wechat"></i></a>
+          <a href="#" class="icon-btn"><i class="iconfont icon-phone"></i></a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 底部 TabBar -->
+    <ul class="tabBar">
+      <li class="tabBar-item">
+        <a href="/index.html">
+          <i class="iconfont icon-home"></i>
+          <p>首页</p>
+        </a>
+      </li>
+      <li class="tabBar-item">
+        <a href="/html/mall.html">
+          <i class="iconfont icon-mall"></i>
+          <p>商城</p>
+        </a>
+      </li>
+      <li class="tabBar-item">
+        <a href="/html/healthy.html">
+          <i class="iconfont icon-healthy"></i>
+          <p>健康</p>
+        </a>
+      </li>
+      <li class="tabBar-item">
+        <a href="/html/community.html">
+          <i class="iconfont icon-communitygreen"></i>
+          <p>社区</p>
+        </a>
+      </li>
+      <li class="tabBar-item">
+        <a href="/html/mine.html">
+          <i class="iconfont icon-mine"></i>
+          <p>我的</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+</body>
+
+</html>

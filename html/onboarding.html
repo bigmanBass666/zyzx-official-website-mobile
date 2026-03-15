@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>欢迎 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/onboarding.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <div class="onboarding-page">
+    <!-- 引导页内容 -->
+    <main class="onboarding-main">
+      <div class="slide active">
+        <div class="illustration">
+          <img src="/img/qrcode.png" alt="扫码体验">
+        </div>
+        <h2 class="title">中医智行</h2>
+        <p class="description">一个基于人工智能的中医药智慧平台</p>
+        <p class="slogan">中医传承 · 品质保障 · 专业团队</p>
+      </div>
+
+      <div class="slide">
+        <div class="illustration">
+          <img src="/img/qrcode.png" alt="功能介绍">
+        </div>
+        <h2 class="title">核心功能</h2>
+        <ul class="features">
+          <li>智能问诊 - AI在线诊断</li>
+          <li>中草药识别 - 拍照识药</li>
+          <li>专家问诊 - 名医在线答疑</li>
+          <li>健康自测 - 体质检测</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <div class="illustration">
+          <img src="/img/qrcode.png" alt="开始体验">
+        </div>
+        <h2 class="title">宗旨：助农·助商·助民·利民</h2>
+        <p class="description">立即加入，开启健康生活</p>
+      </div>
+    </main>
+
+    <!-- 跳过按钮 -->
+    <button class="skip-btn" id="skip-btn">跳过</button>
+
+    <!-- 分页指示器 -->
+    <div class="indicators">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- 开始体验按钮（最后一页显示） -->
+    <button class="btn btn-primary btn-lg btn-block start-btn" id="start-btn">
+      开始体验
+    </button>
+  </div>
+
+  <script type="module" src="/js/onboarding.js"></script>
+</body>
+
+</html>
