@@ -20,22 +20,242 @@
 </head>
 
 <body>
-  <!-- 版权 -->
-  <div class="copyright">
-    copyright © M&T developed by
-    <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
-      Jason Liu <i class="iconfont icon-gitee"></i>
-    </a>
-  </div>
-
-  <!-- 页面主内容区 - 将在后续 feature 中逐步实现 -->
+  <!-- 页面主内容区 -->
   <main id="app">
-    <div class="loader-container">
-      <div class="loader"></div>
+    <!-- 顶部定位栏 -->
+    <header class="location-bar">
+      <div class="location">
+        云浮
+        <i class="iconfont icon-arrow-down-fill"></i>
+      </div>
+      <img src="/img/logo_white.png" alt="中医智行" class="brand" style="height: 24px;">
+    </header>
+
+    <!-- 搜索区域 -->
+    <section class="search-section">
+      <div class="search-box-wrapper">
+        <i class="iconfont icon-search search-icon"></i>
+        <input type="text" class="search-input" placeholder="搜索医院或药品">
+        <i class="iconfont icon-msg msg-icon"></i>
+      </div>
+    </section>
+
+    <!-- 工具网格 -->
+    <section class="tools-section">
+      <div class="tools-grid">
+        <div class="tool-item">
+          <img src="/img/tool/znwz.png" alt="智能问诊" class="tool-icon">
+          <p>智能问诊</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/jkzx.png" alt="健康咨询" class="tool-icon">
+          <p>健康咨询</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/znpf.png" alt="智能配方" class="tool-icon">
+          <p>智能配方</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/znsb.png" alt="智能识别" class="tool-icon">
+          <p>智能识别</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/yfjc.png" alt="药方检测" class="tool-icon">
+          <p>药方检测</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/jkzc.png" alt="健康自测" class="tool-icon">
+          <p>健康自测</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/xljk.png" alt="心理健康" class="tool-icon">
+          <p>心理健康</p>
+        </div>
+        <div class="tool-item">
+          <img src="/img/tool/smzs.png" alt="睡眠助手" class="tool-icon">
+          <p>睡眠助手</p>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="left"></div>
+        <div class="middle active"></div>
+        <div class="right"></div>
+      </div>
+    </section>
+
+    <!-- 预约挂号卡片 -->
+    <section class="appointment-section">
+      <div class="appointment-item">
+        <img src="/img/appointment/yygh-bg.png" alt="" class="bg">
+        <p class="title">预约挂号</p>
+        <p class="description">节约时间</p>
+        <span class="goto">立即咨询</span>
+        <img src="/img/appointment/yygh-icon.png" alt="" class="icon">
+      </div>
+      <div class="appointment-item">
+        <img src="/img/appointment/xxyy-bg.png" alt="" class="bg">
+        <p class="title">线下预约</p>
+        <p class="description">精准治疗</p>
+        <span class="goto">立即咨询</span>
+        <img src="/img/appointment/xxyy-icon.png" alt="" class="icon">
+      </div>
+      <div class="appointment-item">
+        <img src="/img/appointment/zjjj-bg.png" alt="" class="bg">
+        <p class="title">专家讲解</p>
+        <p class="description">知识拓宽</p>
+        <span class="goto">立即咨询</span>
+        <img src="/img/appointment/zjjj-icon.png" alt="" class="icon">
+      </div>
+    </section>
+
+    <!-- 推荐医生 -->
+    <section class="doctor-section">
+      <div class="section-header">
+        <p class="title">推荐医生</p>
+        <a href="#" class="more">更多 <i class="iconfont icon-arrow-right"></i></a>
+      </div>
+      <div class="doctor-list">
+        <div class="doctor-card">
+          <img src="/img/lilac.jpg" alt="江园园" class="doctor-card-avatar">
+          <div class="doctor-card-info">
+            <p class="doctor-card-name">江园园</p>
+            <p class="doctor-card-title">主任医师 | 妇科</p>
+            <div class="doctor-card-stats">
+              <img src="/img/recommend-doctor/stars.png" class="score" alt="评分">
+              <span>3600次接诊</span>
+            </div>
+            <p class="doctor-card-desc">擅长于中西医结合治疗不孕不育症，妇科内分泌失调疾病，复发性流产，妇科炎性疾病...</p>
+          </div>
+          <div class="doctor-card-actions">
+            <button class="btn btn-primary btn-sm">立即咨询</button>
+            <button class="btn btn-outline btn-sm">预约挂号</button>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <img src="/img/lilac.jpg" alt="林青鸿" class="doctor-card-avatar">
+          <div class="doctor-card-info">
+            <p class="doctor-card-name">林青鸿</p>
+            <p class="doctor-card-title">主任中医师 | 针灸科</p>
+            <div class="doctor-card-stats">
+              <img src="/img/recommend-doctor/stars.png" class="score" alt="评分">
+              <span>3600次接诊</span>
+            </div>
+            <p class="doctor-card-desc">运用针灸及中药治疗颈椎病，腰腿痛，膝关节疼痛，带状疱疹神经痛，头痛头晕病...</p>
+          </div>
+          <div class="doctor-card-actions">
+            <button class="btn btn-primary btn-sm">立即咨询</button>
+            <button class="btn btn-outline btn-sm">预约挂号</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 智能穿戴横幅 -->
+    <section class="apparel-section" style="display: none;">
+      <!-- 待添加图片资源后启用 -->
+      <!-- <a href="#">
+        <img src="/img/apparel/bg.png" alt="智能穿戴">
+      </a> -->
+    </section>
+
+    <!-- 热门问题 -->
+    <section class="question-section">
+      <div class="section-header">
+        <p class="title">热门问题</p>
+        <a href="#" class="more">查看全部 <i class="iconfont icon-arrow-right"></i></a>
+      </div>
+      <div class="classification">
+        <div class="item active">育儿</div>
+        <div class="item">养生</div>
+        <div class="item">问诊</div>
+        <div class="item">保健</div>
+        <div class="item">减肥</div>
+      </div>
+      <div class="question-list">
+        <div class="question-item">
+          <h5 class="question-title">宝宝辅食怎么做?</h5>
+          <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
+          <div class="ft">
+            <div class="left">
+              <img src="/img/index/question/upvote.png" alt="点赞">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="收藏">
+              <span>4950</span>
+            </div>
+            <a class="right">我也要提问</a>
+          </div>
+        </div>
+        <div class="question-item">
+          <h5 class="question-title">经常头疼失眠怎么办?</h5>
+          <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
+          <div class="ft">
+            <div class="left">
+              <img src="/img/index/question/upvote.png" alt="点赞">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="收藏">
+              <span>4950</span>
+            </div>
+            <a class="right">我也要提问</a>
+          </div>
+        </div>
+        <div class="question-item">
+          <h5 class="question-title">IT工作者如何养生？</h5>
+          <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
+          <div class="ft">
+            <div class="left">
+              <img src="/img/index/question/upvote.png" alt="点赞">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="收藏">
+              <span>4950</span>
+            </div>
+            <a class="right">我也要提问</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 版权信息 -->
+    <div class="copyright">
+      copyright © M&T developed by
+      <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
+        Jason Liu <i class="iconfont icon-gitee"></i>
+      </a>
     </div>
   </main>
 
-  <!-- TabBar 将在各页面中实现 -->
+  <!-- 底部导航 -->
+  <ul class="tabBar">
+    <li class="tabBar-item active">
+      <a href="/index.html">
+        <i class="iconfont icon-home"></i>
+        <p>首页</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/mall.html">
+        <i class="iconfont icon-mall"></i>
+        <p>商城</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/healthy.html">
+        <i class="iconfont icon-healthy"></i>
+        <p>健康</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/community.html">
+        <i class="iconfont icon-communitygreen"></i>
+        <p>社区</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/mine.html">
+        <i class="iconfont icon-mine"></i>
+        <p>我的</p>
+      </a>
+    </li>
+  </ul>
 
   <!-- Scripts -->
   <script type="module" src="/js/main.js"></script>

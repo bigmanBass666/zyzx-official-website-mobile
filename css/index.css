@@ -1,0 +1,505 @@
+/* 首页样式 - Home Page Styles */
+
+/* ========== 通用区块样式 ========== */
+.section {
+  margin-bottom: var(--space-6);
+  background: var(--bg-card);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-4);
+  border-bottom: 1px solid var(--border-color-light);
+
+  .title {
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+  }
+
+  .more {
+    font-size: var(--font-sm);
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 12px;
+      margin-left: 2px;
+    }
+  }
+}
+
+/* ========== 顶部定位栏 ========== */
+.location-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-green);
+  color: var(--color-white);
+
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+
+    i {
+      font-size: 12px;
+      margin-left: 2px;
+    }
+  }
+
+  .brand {
+    height: 28px;
+    object-fit: contain;
+  }
+}
+
+/* ========== 搜索框区 ========== */
+.search-section {
+  padding: var(--space-4);
+  background: var(--color-green);
+
+  .search-box-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .search-input {
+      flex: 1;
+      height: 40px;
+      padding: 0 var(--space-4);
+      padding-left: var(--space-10);
+      font-size: var(--font-sm);
+      color: var(--text-primary);
+      background: var(--bg-card);
+      border: none;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      &::placeholder {
+        color: var(--text-tertiary);
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      left: var(--space-4);
+      width: 18px;
+      height: 18px;
+      color: var(--text-tertiary);
+    }
+
+    .msg-icon {
+      margin-left: var(--space-3);
+      width: 24px;
+      height: 24px;
+      color: var(--color-white);
+    }
+  }
+}
+
+/* ========== 工具网格 ========== */
+.tools-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4) var(--space-2);
+
+    .tool-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      .tool-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-lg);
+        margin-bottom: var(--space-2);
+        object-fit: cover;
+      }
+
+      p {
+        font-size: var(--font-xs);
+        color: var(--text-primary);
+        text-align: center;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-3);
+
+    .left,
+    .middle,
+    .right {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border-color);
+      margin: 0 3px;
+
+      &.active {
+        background: var(--color-primary);
+      }
+    }
+  }
+}
+
+/* ========== 预约卡片 ========== */
+.appointment-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .appointment-item {
+    position: relative;
+    height: 80px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-green);
+    cursor: pointer;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0执导;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+    }
+
+    .title {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: var(--font-sm);
+      font-weight: var(--font-medium);
+      color: var(--color-white);
+    }
+
+    .description {
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .goto {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: var(--space-1) var(--space-3);
+      font-size: 10px;
+      color: var(--color-primary);
+      background: var(--color-white);
+      border-radius: var(--radius-full);
+    }
+  }
+}
+
+/* ========== 推荐医生 ========== */
+.doctor-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+
+  .doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+
+    .doctor-card {
+      display: flex;
+      padding: var(--space-3);
+      background: var(--bg-page);
+      border-radius: var(--radius-md);
+
+      &-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        background: var(--bg-gray-lighter);
+      }
+
+      &-info {
+        flex: 1;
+        margin-left: var(--space-3);
+      }
+
+      &-name {
+        font-size: var(--font-sm);
+        font-weight: var(--font-semibold);
+        color: var(--text-primary);
+        margin-bottom: 2px;
+      }
+
+      &-title {
+        font-size: var(--font-xs);
+        color: var(--text-secondary);
+        margin-bottom: var(--space-2);
+      }
+
+      &-desc {
+        font-size: var(--font-xs);
+        color: var(--text-secondary);
+        line-height: var(--leading-snug);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      &-stats {
+        display: flex;
+        align-items: center;
+        margin-top: var(--space-1);
+        font-size: var(--font-xs);
+        color: var(--text-tertiary);
+
+        .score {
+          width: 50px;
+          height: 10px;
+          margin-right: var(--space-2);
+        }
+      }
+
+      &-actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--space-2);
+        margin-left: var(--space-3);
+
+        .btn {
+          font-size: var(--font-xs);
+          padding: var(--space-1) var(--space-3);
+        }
+      }
+    }
+  }
+}
+
+/* ========== 智能穿戴 ========== */
+.apparel-section {
+  margin: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* ========== 热门问题 ========== */
+.question-section {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  margin-bottom: var(--space-3);
+
+  .classification {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .item {
+      flex-shrink: 0;
+      padding: var(--space-2) var(--space-4);
+      font-size: var(--font-sm);
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-full);
+
+      &.active {
+        color: var(--color-white);
+        background: var(--color-primary);
+      }
+    }
+  }
+
+  .question-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    .question-item {
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--border-color-light);
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .question-title {
+        font-size: var(--font-sm);
+        font-weight: var(--font-medium);
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+      }
+
+      .question-text {
+        font-size: var(--font-sm);
+        color: var(--text-secondary);
+        line-height: var(--leading-snug);
+        margin-bottom: var(--space-3);
+      }
+
+      .ft {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          align-items: center;
+          gap: var(--space-3);
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+
+          span {
+            font-size: var(--font-xs);
+            color: var(--text-tertiary);
+          }
+        }
+
+        .right {
+          font-size: var(--font-xs);
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+/* ========== TabBar 底部导航 ========== */
+.tabBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 56px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color-light);
+  z-index: var(--z-sticky);
+  padding-bottom: var(--safe-area-inset-bottom);
+
+  &-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    transition: color var(--transition-fast);
+
+    i {
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    &.active {
+      color: var(--color-primary);
+
+      i {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/* ========== 版权信息 ========== */
+.copyright {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-align: center;
+  white-space: nowrap;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2px;
+  }
+}
+
+/* Loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
