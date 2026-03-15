@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "project": "中医智行移动端官网重构",
+    "description": "完全还原 Sketch 设计稿，使用纯 CSS + 原生 JS 实现",
+    "granularity": "medium",
+    "granularity_rationale": "按页面和模块拆分为中粒度，每个 feature 对应一个完整页面或功能模块",
+    "execution_mode": "complete_all",
+    "tech_stack": "HTML5 + CSS3 (原生) + Vanilla JavaScript + Vite (dev server)",
+    "total_features": 21,
+    "created": "2025-03-15T21:30:00",
+    "design_system_source": "sketch_extract/pages/eFRVuNK-h4GYJi-EUH71B.json + 8_1.json"
+  },
+  "features": [
+    {
+      "id": 1,
+      "category": "setup",
+      "description": "设计系统创建：提取颜色、字体、间距变量，建立 CSS 架构",
+      "steps": [
+        "从 Sketch JSON 提取主色系、字体排印、间距系统",
+        "创建 css/variables.css 定义 CSS Custom Properties",
+        "创建 css/base.css 实现重置和基础样式",
+        "创建 css/components/ 目录和通用组件样式（按钮、卡片、输入框等）",
+        "更新 html/*.html 移除所有 Bootstrap 类名引用",
+        "E2E test: 打开首页，验证 CSS 变量生效，无 Bootstrap 依赖"
+      ],
+      "passes": false
+    },
+    {
+      "id": 2,
+      "category": "setup",
+      "description": "开发环境配置：添加 Vite 配置，优化开发体验",
+      "steps": [
+        "创建 vite.config.js 配置 dev server 和 build 选项",
+        "添加 package.json 依赖（vite）",
+        "创建开发启动脚本（dev 和 build）",
+        "测试开发服务器启动和热更新",
+        "E2E test: 启动服务器，访问 http://localhost:5173 显示首页"
+      ],
+      "passes": false
+    },
+    {
+      "id": 3,
+      "category": "page",
+      "description": "首页完整实现：还原 Sketch 首页设计（位置栏、搜索、工具入口、推荐医生、热门问题、TabBar）",
+      "steps": [
+        "重构 index.html 结构，按设计稿布局划分区块",
+        "实现顶部定位栏（城市选择、logo）",
+        "实现搜索框区域（搜索输入框、消息图标）",
+        "实现工具网格（8个功能入口图标+文字）",
+        "实现推荐医生卡片（医生列表、操作按钮）",
+        "实现智能穿戴横幅区域",
+        "实现热门问题模块（分类 Tab + 问题列表）",
+        "实现底部 TabBar（首页/商城/健康/社区/我的）高亮状态",
+        "E2E test: 使用浏览器访问，逐项检查各模块内容、布局、图片加载，截图验证"
+      ],
+      "passes": false
+    },
+    {
+      "id": 4,
+      "category": "page",
+      "description": "登录页与引导页：实现用户登录流程和首次引导",
+      "steps": [
+        "创建 login.html 页面，还原登录表单（账号、密码输入、协议勾选）",
+        "创建 onboarding.html 引导页（跳过按钮、应用介绍）",
+        "实现表单验证（非空检查、格式检查）",
+        "添加登录状态管理（localStorage token 存储）",
+        "E2E test: 输入测试账号密码，验证登录跳转；引导页点击跳过检查"
+      ],
+      "passes": false
+    },
+    {
+      "id": 5,
+      "category": "page",
+      "description": "健康页：健康资讯列表、分类筛选、健康讲堂",
+      "steps": [
+        "创建 healthy.html 页面结构",
+        "实现顶部 Tab 栏（调理/医院/药品/疾病/指南）",
+        "实现资讯列表（标题、摘要、医生信息）",
+        "实现健康讲堂卡片（可点击展开）",
+        "实现底部 TabBar 联动",
+        "E2E test: 点击分类切换，验证列表更新效果"
+      ],
+      "passes": false
+    },
+    {
+      "id": 6,
+      "category": "page",
+      "description": "商城首页：商品分类、搜索、今日推荐、优选药材展示",
+      "steps": [
+        "创建 mall.html 页面，完善现有占位内容",
+        "实现顶部搜索栏（搜索医院或药品）",
+        "实现分类导航（养生调理、中草药直购、按方抓药、送药到家等入口）",
+        "实现今日推荐商品网格（图片、价格、推荐标签）",
+        "实现优选药材横向滚动列表",
+        "实现底部 TabBar",
+        "E2E test: 验证商品卡片显示、价格格式、标签正确渲染"
+      ],
+      "passes": false
+    },
+    {
+      "id": 7,
+      "category": "page",
+      "description": "商品详情页：完整商品信息、促销、规格选择、购买按钮",
+      "steps": [
+        "创建 product-detail.html 页面（或复用 mall 子页面）",
+        "实现商品图片轮播或展示区",
+        "实现商品信息区（标题、价格、折扣、销量、浏览量）",
+        "实现促销标签和满减优惠展示",
+        "实现规格选择器（颜色/数量）",
+        "实现底部操作栏（客服、收藏、立即购买）",
+        "E2E test: 点击数量选择器，验证价格计算；点击购买验证反馈"
+      ],
+      "passes": false
+    },
+    {
+      "id": 8,
+      "category": "page",
+      "description": "社区页：动态列表、推荐/动态/小组 Tab、用户互动数据",
+      "steps": [
+        "创建 community.html 页面",
+        "实现顶部 Tab 切换（推荐、动态、小组）",
+        "实现帖子列表（用户头像、昵称、内容、图片、点赞/评论/转发数）",
+        "实现 TabBar 联动",
+        "E2E test: 点击 Tab 切换，验证列表内容变化；点击点赞按钮验证状态"
+      ],
+      "passes": false
+    },
+    {
+      "id": 9,
+      "category": "page",
+      "description": "个人中心页：会员信息、订单入口、健康券、收藏等",
+      "steps": [
+        "创建 mine.html 页面结构",
+        "实现用户信息区域（头像、昵称、会员等级、开通VIP入口）",
+        "实现我的订单卡片（待付款、待发货、待收货、已完成入口）",
+        "实现功能列表组（我的就诊记录、健康券、收藏、医生、档案等）",
+        "实现在线客服、关于平台、设置等入口",
+        "实现底部 TabBar 高亮",
+        "E2E test: 点击各功能入口验证跳转功能"
+      ],
+      "passes": false
+    },
+    {
+      "id": 10,
+      "category": "page",
+      "description": "我的订单页：Tab切换（状态筛选）、订单列表、操作按钮",
+      "steps": [
+        "创建 my-orders.html 页面",
+        "实现订单状态 Tab（全部、待付款、待发货、待收货、已完成、评价）",
+        "实现订单卡片（商品图片、名称、价格、数量、订单编号、物流状态）",
+        "实现操作按钮（确认收货、查看物流、申请售后、再次购买、追加评价）",
+        "实现空状态（无订单时显示）",
+        "E2E test: 切换不同状态 Tab，验证订单列表筛选；点击操作按钮验证功能"
+      ],
+      "passes": false
+    },
+    {
+      "id": 11,
+      "category": "page",
+      "description": "提交订单页：订单确认、地址展示、价格明细、提交",
+      "steps": [
+        "创建 submit-order.html 页面",
+        "实现商品信息区（商品名、数量、店铺信息）",
+        "实现收货地址选择（默认地址展示）",
+        "实现配送信息（发货时间、发票选项）",
+        "实现价格明细（商品总价、优惠券、运费、合计）",
+        "实现底部提交按钮（固定定位）",
+        "E2E test: 验证价格计算逻辑，点击提交验证订单创建成功"
+      ],
+      "passes": false
+    },
+    {
+      "id": 12,
+      "category": "page",
+      "description": "设置页：个人资料、修改密码、通知、关于、清除缓存",
+      "steps": [
+        "创建 settings.html 页面",
+        "实现设置列表（个人资料、修改密码、消息通知、关于我们、升级版本、清除缓存）",
+        "实现退出账号按钮",
+        "实现版本号显示（从配置读取）",
+        "实现清除缓存功能（localStorage 清理）",
+        "E2E test: 点击退出账号验证登录态清除；清除缓存检查存储清理"
+      ],
+      "passes": false
+    },
+    {
+      "id": 13,
+      "category": "page",
+      "description": "意见反馈页：表单输入、提交反馈",
+      "steps": [
+        "创建 feedback.html 页面",
+        "实现反馈文本域（带字数限制提示）",
+        "实现手机号输入框（格式验证）",
+        "实现提交按钮和加载状态",
+        "实现提交成功/失败提示",
+        "E2E test: 填写反馈内容并提交，验证反馈成功提示和数据保存"
+      ],
+      "passes": false
+    },
+    {
+      "id": 14,
+      "category": "page",
+      "description": "智能问诊：导诊接待对话、配方生成流程",
+      "steps": [
+        "创建 ai-diagnosis.html 页面",
+        "实现导诊接待界面（用户输入、智能助手回复）",
+        "实现对话消息气泡（用户 vs 助手区分样式）",
+        "实现配方生成结果展示（药物列表、用药说明）",
+        "实现「前往拿药」和「回首页」按钮",
+        "添加用户协议确认弹窗（首次进入）",
+        "E2E test: 模拟对话流程，输入症状，验证配方生成；测试导航按钮"
+      ],
+      "passes": false
+    },
+    {
+      "id": 15,
+      "category": "page",
+      "description": "专家问诊：医患对话、处方查看、问诊结束",
+      "steps": [
+        "创建 expert-consultation.html 页面",
+        "实现医生信息展示区（头像、姓名、职称）",
+        "实现聊天对话界面（发送消息、接收回复、时间戳）",
+        "实现处方查看入口和弹窗",
+        "实现问诊结束状态和评价入口",
+        "支持语音、图片、文件输入（图标展示即可）",
+        "E2E test: 发送消息并模拟医生回复，验证对话流程完整"
+      ],
+      "passes": false
+    },
+    {
+      "id": 16,
+      "category": "page",
+      "description": "专家问诊评价反馈：评分、标签选择、文字评价",
+      "steps": [
+        "扩展 expert-consultation.html 增加评价模块",
+        "实现评价星级（1-5星）",
+        "实现标签选择（热情亲切、认真负责、医术高超等正面；缺乏经验、没有耐心等负面）",
+        "实现文字评价输入框（200字限制）",
+        "实现提交评价功能",
+        "E2E test: 选择标签并提交，验证评价数据收集和提交成功"
+      ],
+      "passes": false
+    },
+    {
+      "id": 17,
+      "category": "page",
+      "description": "健康自测页：问卷题目、选项选择、提交查看结果",
+      "steps": [
+        "创建 health-test.html 页面",
+        "实现测试说明和注意事项",
+        "实现题目列表（是否题、单选按钮样式）",
+        "实现选项交互（是/否按钮样式）",
+        "实现提交和查看结果流程",
+        "实现体质调理师咨询入口（可选）",
+        "E2E test: 完成所有题目并提交，验证结果计算和展示"
+      ],
+      "passes": false
+    },
+    {
+      "id": 18,
+      "category": "page",
+      "description": "智能识别：照相机功能页面",
+      "steps": [
+        "创建 camera.html 页面结构",
+        "实现相机调用（ navigator.mediaDevices.getUserMedia）",
+        "实现拍照按钮和预览区",
+        "实现识别结果展示（中草药识别）",
+        "实现拍照闪光和音效反馈",
+        "E2E test: 调用摄像头（如果支持），拍照并验证识别结果返回"
+      ],
+      "passes": false
+    },
+    {
+      "id": 19,
+      "category": "page",
+      "description": "智能配方页面（待办）：功能占位，后续完善",
+      "steps": [
+        "创建 formula.html 页面（占位）",
+        "显示「该功能开发中，敬请期待」空状态",
+        "添加 TabBar 导航",
+        "E2E test: 验证页面正常显示，空状态文案正确"
+      ],
+      "passes": false
+    },
+    {
+      "id": 20,
+      "category": "global",
+      "description": "全局交互优化：Lenis 平滑滚动、Driver.js 引导、底部导航切换",
+      "steps": [
+        "全局集成 Lenis 平滑滚动（index.html 已引用，需初始化配置）",
+        "实现 Driver.js 用户引导流程（首页首次进入显示）",
+        "实现 TabBar 页面切换逻辑（SPA 风格或多页跳转保持高亮）",
+        "实现页面切换动画（淡入淡出）",
+        "E2E test: 打开首页，验证平滑滚动；验证 TabBar 点击切换高亮"
+      ],
+      "passes": false
+    },
+    {
+      "id": 21,
+      "category": "quality",
+      "description": "响应式测试与修复：所有页面在不同尺寸设备上的视觉验证",
+      "steps": [
+        "使用 Playwright 测试 iPhone SE (375px)、iPhone 12 (390px)、Android (360px) 等常见尺寸",
+        "检查所有页面是否存在横向滚动或溢出",
+        "检查字体大小、间距在超小屏幕的适配",
+        "检查图片缩放和裁剪效果",
+        "修复发现的响应式问题",
+        "E2E test: 使用多种视口尺寸访问所有页面，截图对比记录"
+      ],
+      "passes": false
+    }
+  ]
+}
