@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# IDE
+.vscode/
+
+# Logs
+.claudeignore
+.playwright-mcp/
+
+# Temporary files
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
