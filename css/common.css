@@ -1,0 +1,47 @@
+html {
+  --main-color: #1446cc;
+  --main-color-rgb: 20, 70, 204;
+  --body-color: var(--bs-body-color);
+  --bs-shadow: 0 0.0417rem 0.0833rem rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-shadow-active: 0 0.0208rem 0.0417rem rgba(var(--bs-body-color-rgb), 0.15);
+  --xiaomi-shadow: 0 0.0781rem 0.1563rem rgba(0, 0, 0, 0.1);
+  --xiaomi-shadow-active: 0 0.0391rem 0.0781rem rgba(0, 0, 0, 0.1);
+  --transition-duration: 0.2s;
+  --bs-nice-shadow: 0 0 0 0.0208rem rgba(var(--main-color-rgb), 0.25);
+  overflow-x: hidden !important;
+}
+html body {
+  font-size: 0.425999rem;
+}
+html body .iconfont:hover {
+  color: var(--main-color);
+}
+* {
+  caret-color: var(--main-color) !important;
+}
+* ::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.copyright {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.35rem;
+}
+.copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+.copyright a i {
+  transition: color var(--transition-duration);
+  font-size: inherit;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+.copyright a:hover i {
+  color: #c71d23;
+}
+::-webkit-scrollbar {
+  width: 0;
+}

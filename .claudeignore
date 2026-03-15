@@ -1,0 +1,54 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.tmp
+*.temp
+
+# Environment
+.env
+.env.local
+
+# Editor
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+
+# AI / Agent tools
+.playwright-mcp/
+.trae/
+.cursor/
+.copilot/
+
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+.next/
+.nuxt/
+
+# Cache
+.cache/
+.parcel-cache/
+.nyc_output/
+coverage/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Project-specific non-code
+5b209af4fc069de12a517e0f9853774f.txt
