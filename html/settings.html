@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>设置 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/settings.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部定位栏 -->
+    <header class="location-bar">
+      <button class="back-btn" onclick="window.history.back()">
+        <i class="iconfont icon-arrow-left"></i>
+      </button>
+      <div class="title">设置</div>
+      <button class="search-btn" style="visibility: hidden;">
+        <i class="iconfont icon-search"></i>
+      </button>
+    </header>
+
+    <!-- 设置列表 -->
+    <section class="settings-section">
+      <!-- 账号安全 -->
+      <div class="settings-group">
+        <div class="group-title">账号安全</div>
+        <div class="settings-list">
+          <div class="settings-item" data-action="profile">
+            <div class="item-icon">
+              <i class="iconfont icon-user"></i>
+            </div>
+            <p class="item-name">个人资料</p>
+            <i class="iconfont icon-arrow-right"></i>
+          </div>
+          <div class="settings-item" data-action="password">
+            <div class="item-icon">
+              <i class="iconfont icon-lock"></i>
+            </div>
+            <p class="item-name">修改密码</p>
+            <i class="iconfont icon-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- 消息通知 -->
+      <div class="settings-group">
+        <div class="group-title">消息通知</div>
+        <div class="settings-list">
+          <div class="settings-item toggle" data-action="notification">
+            <div class="item-icon">
+              <i class="iconfont icon-notification"></i>
+            </div>
+            <p class="item-name">消息通知</p>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 关于应用 -->
+      <div class="settings-group">
+        <div class="group-title">关于应用</div>
+        <div class="settings-list">
+          <div class="settings-item" data-action="about">
+            <div class="item-icon">
+              <i class="iconfont icon-about"></i>
+            </div>
+            <p class="item-name">关于我们</p>
+            <i class="iconfont icon-arrow-right"></i>
+          </div>
+          <div class="settings-item" data-action="version">
+            <div class="item-icon">
+              <i class="iconfont icon-version"></i>
+            </div>
+            <p class="item-name">当前版本</p>
+            <span class="item-value">v1.0.0</span>
+          </div>
+          <div class="settings-item action" data-action="clear-cache">
+            <div class="item-icon">
+              <i class="iconfont icon-clear"></i>
+            </div>
+            <p class="item-name">清除缓存</p>
+            <span class="item-value" id="cacheSize">0 KB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 退出登录 -->
+      <div class="settings-group">
+        <div class="settings-list">
+          <div class="settings-item logout" data-action="logout">
+            <div class="item-icon">
+              <i class="iconfont icon-logout"></i>
+            </div>
+            <p class="item-name">退出账号</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 版权信息 -->
+    <div class="copyright">
+      copyright © M&T developed by
+      <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
+        Jason Liu <i class="iconfont icon-gitee"></i>
+      </a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/settings.js"></script>
+</body>
+
+</html>

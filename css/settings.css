@@ -1,0 +1,141 @@
+/* 设置页样式 - Settings Page Styles */
+
+/* ========== 设置区块 ========== */
+.settings-section {
+  padding: var(--space-4);
+}
+
+.settings-group {
+  margin-bottom: var(--space-5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .group-title {
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+    padding: 0 var(--space-4) var(--space-2);
+  }
+
+  .settings-list {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+}
+
+/* ========== 设置项目 ========== */
+.settings-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-color-light);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:active {
+    background: var(--bg-secondary);
+  }
+
+  &.logout {
+    justify-content: center;
+    border-top: 1px solid var(--border-color-light);
+    margin-top: var(--space-4);
+
+    .item-icon {
+      display: none;
+    }
+
+    .item-name {
+      color: var(--color-primary);
+      font-weight: var(--font-semibold);
+    }
+  }
+
+  .item-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-3);
+    flex-shrink: 0;
+
+    i {
+      font-size: 18px;
+      color: var(--color-primary);
+    }
+  }
+
+  .item-name {
+    flex: 1;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+  }
+
+  .item-value {
+    font-size: var(--font-sm);
+    color: var(--text-tertiary);
+    margin-right: var(--space-2);
+  }
+
+  i.icon-arrow-right {
+    font-size: 14px;
+    color: var(--text-tertiary);
+  }
+}
+
+/* ========== 开关切换 ========== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  flex-shrink: 0;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .3s;
+    border-radius: 28px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  input:checked + .slider {
+    background-color: var(--color-primary);
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+}
