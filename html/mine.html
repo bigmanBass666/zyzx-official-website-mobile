@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>个人中心 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/mine.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部定位栏 -->
+    <header class="location-bar">
+      <div class="location">
+        云浮
+        <i class="iconfont icon-arrow-down-fill"></i>
+      </div>
+      <img src="/img/logo_white.png" alt="中医智行" class="brand" style="height: 24px;">
+    </header>
+
+    <!-- 用户信息区域 -->
+    <section class="user-section">
+      <div class="user-card">
+        <div class="user-info">
+          <img src="/img/avatar/default-avatar.png" alt="用户头像" class="user-avatar" id="userAvatar">
+          <div class="user-details">
+            <p class="user-name" id="userName">点击登录</p>
+            <div class="user-vip">
+              <i class="iconfont icon-vip"></i>
+              <span>开通VIP会员</span>
+              <i class="iconfont icon-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="user-stats">
+          <div class="stat-item">
+            <p class="stat-value">0</p>
+            <p class="stat-label">收藏</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-value">0</p>
+            <p class="stat-label">关注</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-value">0</p>
+            <p class="stat-label">浏览历史</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 会员开通横幅 -->
+      <div class="vip-banner">
+        <div class="vip-content">
+          <div class="vip-icon">
+            <i class="iconfont icon-crown"></i>
+          </div>
+          <div class="vip-info">
+            <p class="vip-title">开通VIP会员</p>
+            <p class="vip-desc">享专属优惠、优先客服、健康券礼包</p>
+          </div>
+        </div>
+        <button class="btn-open-vip">立即开通</button>
+      </div>
+    </section>
+
+    <!-- 我的订单 -->
+    <section class="orders-section">
+      <div class="section-header">
+        <p class="title">我的订单</p>
+        <a href="/html/my-orders.html" class="more">查看全部 <i class="iconfont icon-arrow-right"></i></a>
+      </div>
+      <div class="order-types">
+        <div class="order-type-item" data-status="unpaid">
+          <div class="type-icon">
+            <i class="iconfont icon-order-unpaid"></i>
+            <span class="badge" id="unpaidCount" style="display: none;">0</span>
+          </div>
+          <p class="type-name">待付款</p>
+        </div>
+        <div class="order-type-item" data-status="unsent">
+          <div class="type-icon">
+            <i class="iconfont icon-order-unsent"></i>
+            <span class="badge" id="unsentCount" style="display: none;">0</span>
+          </div>
+          <p class="type-name">待发货</p>
+        </div>
+        <div class="order-type-item" data-status="unreceived">
+          <div class="type-icon">
+            <i class="iconfont icon-order-unreceived"></i>
+            <span class="badge" id="unreceivedCount" style="display: none;">0</span>
+          </div>
+          <p class="type-name">待收货</p>
+        </div>
+        <div class="order-type-item" data-status="completed">
+          <div class="type-icon">
+            <i class="iconfont icon-order-completed"></i>
+          </div>
+          <p class="type-name">已完成</p>
+        </div>
+        <div class="order-type-item" data-status="review">
+          <div class="type-icon">
+            <i class="iconfont icon-order-review"></i>
+          </div>
+          <p class="type-name">待评价</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 功能列表组 -->
+    <section class="functions-section">
+      <div class="section-header">
+        <p class="title">我的服务</p>
+      </div>
+
+      <div class="function-group">
+        <div class="function-item" data-action="medical-records">
+          <div class="function-icon">
+            <i class="iconfont icon-medical-record"></i>
+          </div>
+          <p class="function-name">我的就诊记录</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="health-voucher">
+          <div class="function-icon">
+            <i class="iconfont icon-voucher"></i>
+          </div>
+          <p class="function-name">健康券</p>
+          <span class="badge" id="voucherCount" style="display: none;">0</span>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="favorites">
+          <div class="function-icon">
+            <i class="iconfont icon-favorite"></i>
+          </div>
+          <p class="function-name">我的收藏</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="doctors">
+          <div class="function-icon">
+            <i class="iconfont icon-doctor"></i>
+          </div>
+          <p class="function-name">关注医生</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="health-file">
+          <div class="function-icon">
+            <i class="iconfont icon-file"></i>
+          </div>
+          <p class="function-name">健康档案</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="function-group">
+        <div class="function-item" data-action="customer-service">
+          <div class="function-icon">
+            <i class="iconfont icon-customer-service"></i>
+          </div>
+          <p class="function-name">在线客服</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="about">
+          <div class="function-icon">
+            <i class="iconfont icon-about"></i>
+          </div>
+          <p class="function-name">关于我们</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+        <div class="function-item" data-action="settings">
+          <div class="function-icon">
+            <i class="iconfont icon-settings"></i>
+          </div>
+          <p class="function-name">设置</p>
+          <i class="iconfont icon-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- 退出登录按钮 -->
+    <section class="logout-section">
+      <button class="btn-logout" id="logoutBtn">退出账号</button>
+    </section>
+
+    <!-- 版权信息 -->
+    <div class="copyright">
+      copyright © M&T developed by
+      <a href="https://gitee.com/paeonia-lactiflora" target="_blank">
+        Jason Liu <i class="iconfont icon-gitee"></i>
+      </a>
+    </div>
+  </main>
+
+  <!-- 底部导航 -->
+  <ul class="tabBar">
+    <li class="tabBar-item">
+      <a href="/index.html">
+        <i class="iconfont icon-home"></i>
+        <p>首页</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/mall.html">
+        <i class="iconfont icon-mall"></i>
+        <p>商城</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/healthy.html">
+        <i class="iconfont icon-healthy"></i>
+        <p>健康</p>
+      </a>
+    </li>
+    <li class="tabBar-item">
+      <a href="/html/community.html">
+        <i class="iconfont icon-communitygreen"></i>
+        <p>社区</p>
+      </a>
+    </li>
+    <li class="tabBar-item active">
+      <a href="/html/mine.html">
+        <i class="iconfont icon-mine"></i>
+        <p>我的</p>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/mine.js"></script>
+</body>
+
+</html>
