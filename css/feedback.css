@@ -1,0 +1,244 @@
+/* 意见反馈页样式 - Feedback Page Styles */
+
+/* ========== 表单区域 ========== */
+.feedback-section {
+  padding: var(--space-4);
+}
+
+.form-group {
+  margin-bottom: var(--space-5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .form-label {
+    display: block;
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+
+    .required {
+      color: var(--color-primary);
+    }
+  }
+
+  .form-hint {
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+    margin-top: var(--space-2);
+  }
+}
+
+/* ========== 文本输入区 ========== */
+.textarea-wrapper {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+
+  .feedback-textarea {
+    width: 100%;
+    min-height: 150px;
+    border: none;
+    background: transparent;
+    font-size: var(--font-md);
+    color: var(--text-primary);
+    line-height: var(--leading-normal);
+    resize: none;
+    outline: none;
+
+    &::placeholder {
+      color: var(--text-tertiary);
+    }
+  }
+
+  .char-count {
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-3);
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+  }
+}
+
+/* ========== 输入框 ========== */
+.input-wrapper {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+
+  .phone-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: var(--font-md);
+    color: var(--text-primary);
+    outline: none;
+
+    &::placeholder {
+      color: var(--text-tertiary);
+    }
+  }
+}
+
+/* ========== 标签选择器 ========== */
+.tag-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+
+  .tag-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &.active {
+      color: var(--color-white);
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+/* ========== 图片上传器 ========== */
+.image-uploader {
+  display: flex;
+  gap: var(--space-3);
+
+  .upload-area {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:active {
+      border-color: var(--color-primary);
+      background: rgba(255, 107, 107, 0.05);
+    }
+
+    i {
+      font-size: 24px;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-1);
+    }
+
+    p {
+      font-size: var(--font-xs);
+      color: var(--text-secondary);
+    }
+
+    .hint {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+  }
+
+  .preview-area {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+
+    .preview-item {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-card);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .delete-btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+
+        i {
+          font-size: 10px;
+        }
+
+        &:active {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+}
+
+/* ========== 底部占位 ========== */
+.bottom-placeholder {
+  height: 70px;
+}
+
+/* ========== 底部提交栏 ========== */
+.submit-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--space-4);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color-light);
+  z-index: var(--z-sticky);
+  padding-bottom: var(--safe-area-inset-bottom);
+
+  .btn-submit {
+    width: 100%;
+    padding: var(--space-3);
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:active:not(:disabled) {
+      transform: scale(0.98);
+      opacity: 0.9;
+    }
+
+    &:disabled {
+      background: var(--border-color);
+      cursor: not-allowed;
+    }
+  }
+}

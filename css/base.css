@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 基础重置样式 - Design System Base */
 
 /* Box sizing rules */
@@ -180,4 +181,130 @@ a:hover {
 
 .safe-area-bottom {
   padding-bottom: var(--safe-area-inset-bottom, 0);
+=======
+/* 把我们所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+
+    transition: all var(--transition-duration);
+
+    caret-color: var(--main-color) !important;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+html {
+    --main-color: #007AFF;
+    --main-color-rgb: 20, 70, 204;
+
+    --body-color: var(--bs-body-color);
+
+
+    --bs-shadow: 0 .2133rem .4267rem rgba(var(--bs-body-color-rgb), 0.15);
+    --bs-shadow-active: 0 .1067rem .2133rem rgba(var(--bs-body-color-rgb), 0.15);
+    --xiaomi-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .2);
+    --xiaomi-shadow-active: 0 .2667rem 1.0667rem rgba(0, 0, 0, .2);
+
+    --btn-bg: linear-gradient(225deg, #4975EC 0%, #97B3FF 100%);
+    --btn-shadow: 0px .0475rem .404rem #5680EF;
+    --btn-shadow-active: 0px .0275rem .204rem #5680EF;
+
+
+    --transition-duration: .15s;
+    --bs-nice-shadow: 0 0 0 .0208rem rgba(var(--main-color-rgb), .25);
+
+    overflow-x: hidden !important;
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li 的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer
+}
+
+a {
+    /* color: #666; */
+    /* color: var(--bs-body-color); */
+    color: inherit;
+    text-decoration: none
+}
+
+a:hover {
+    color: inherit
+}
+
+label {
+    cursor: pointer;
+}
+
+input,
+button {
+    /* 去除input 按钮的默认样式 */
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+
+}
+
+.hide,
+.none {
+    display: none
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
 }

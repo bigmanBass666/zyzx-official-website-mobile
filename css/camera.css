@@ -1,0 +1,60 @@
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#backBtn {
+  position: absolute;
+  top: 0.6667rem;
+  left: 0.8667rem;
+}
+#backBtn i {
+  font-size: 2rem;
+  color: #fff;
+}
+.line {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 0.1rem;
+  border-radius: 50rem;
+  background-color: var(--main-color);
+  animation: scan 3s infinite ease;
+}
+@keyframes scan {
+  to {
+    top: 70%;
+    opacity: 0;
+  }
+}
+.text {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #fff;
+  text-wrap: nowrap;
+}
+.text p {
+  text-align: center;
+}
+input[type="file"] {
+  display: none;
+}
+label[for="file"] {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  color: #fff;
+}
+label[for="file"] i {
+  font-size: 3rem;
+}

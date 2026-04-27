@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 首页样式 - Home Page Styles */
 
 /* ========== 通用区块样式 ========== */
@@ -503,3 +504,362 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+=======
+.title {
+  position: relative;
+  margin-top: 0.9rem;
+}
+.title .pharmacy {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  margin-top: 0.1rem;
+  height: 100%;
+  font-size: 0.5rem;
+}
+.title .pharmacy .left {
+  margin-left: 0.2rem;
+  font-size: 1.11em;
+}
+.title .pharmacy .location {
+  margin-left: 0.12rem;
+}
+.title .pharmacy .location i {
+  margin-left: -0.13rem;
+}
+.searchBox {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 0.9rem;
+  width: 100%;
+}
+.searchBox i {
+  color: #d4d8e6;
+}
+.searchBox .searchInput {
+  padding-left: 1.1rem;
+  height: 100%;
+  width: 78%;
+  border-radius: 999rem;
+  border: none;
+  background-color: #fff;
+  font-size: 0.35rem;
+}
+.searchBox .searchBtn {
+  position: absolute;
+  left: 0.85rem;
+  display: flex;
+}
+.searchBox .searchBtn i {
+  font-size: 0.5rem;
+}
+.searchBox .right {
+  font-size: 0.9rem;
+}
+.searchBox .right:hover {
+  transform: translateY(-0.05rem);
+}
+.searchBox .right:active {
+  transform: translateY(0);
+}
+.tools {
+  position: relative;
+  padding: 0.3rem 0 0.4rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+.tools ul.row {
+  display: flex;
+  justify-content: space-around;
+}
+.tools ul.row li:hover {
+  color: var(--main-color);
+}
+.tools ul.row li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tools ul.row li a img {
+  height: 1.2rem;
+}
+.tools ul.row li a p {
+  margin-top: 0.15rem;
+  text-wrap: nowrap;
+  font-size: 0.32rem;
+}
+.tools ul.row:last-of-type {
+  margin: 0.4rem 0.2rem 0.1rem;
+}
+.tools .slider {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.1rem;
+  background-color: rgba(20, 70, 204, 0.3);
+  border-radius: 999rem;
+}
+.tools .slider .left {
+  height: 0.07rem;
+  width: 50%;
+  background-color: #1446cc;
+  border-radius: 999rem;
+}
+.appointment {
+  padding: 0.11rem;
+  border-radius: 0.15rem;
+  background-color: #fff;
+}
+.appointment ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.appointment ul .btn {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.3rem;
+  width: 2.5rem;
+}
+.appointment ul li {
+  position: relative;
+  border-radius: 0.2955rem;
+  box-shadow: var(--bs-active-shadow);
+}
+.appointment ul li:nth-child(2) {
+  overflow: hidden;
+}
+.appointment ul li:hover {
+  transform: translateY(-0.05rem);
+  box-shadow: var(--bs-shadow);
+}
+.appointment ul li:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.appointment ul li a {
+  color: #fff;
+  overflow: hidden;
+}
+.appointment ul li a p,
+.appointment ul li a a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+}
+.appointment ul li a .title {
+  margin: 0;
+  top: 0.3rem;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-shadow: var(--xiaomi-shadow);
+}
+.appointment ul li a .description {
+  top: 1.25rem;
+  font-size: 1.1em;
+}
+.appointment ul li a img.bg {
+  width: 3rem;
+}
+.appointment ul li a img.icon {
+  position: absolute;
+  z-index: 1;
+}
+.appointment ul li a img.icon#yygh-icon {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 2.8rem;
+}
+.appointment ul li a img.icon#xxyy-icon {
+  height: 3.8rem;
+  right: -0.3rem;
+  bottom: -0.5rem;
+}
+.appointment ul li a img.icon#zjjj-icon {
+  width: 100%;
+  right: -0.01rem;
+  bottom: -0.11rem;
+}
+.recommend-doctor,
+.question,
+.apparel {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+}
+.recommend-doctor .header,
+.question .header,
+.apparel .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+.recommend-doctor .header p,
+.question .header p,
+.apparel .header p {
+  position: relative;
+  background: url(/img/index/recommend-doctor/header-bg.png) no-repeat;
+  background-position: left 61%;
+  background-size: contain;
+  font-size: 0.4rem;
+  letter-spacing: 0.1em;
+}
+.recommend-doctor .header a.more,
+.question .header a.more,
+.apparel .header a.more {
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+}
+.recommend-doctor .header a.more:hover,
+.question .header a.more:hover,
+.apparel .header a.more:hover {
+  color: var(--main-color);
+}
+.recommend-doctor .header a.more:hover i,
+.question .header a.more:hover i,
+.apparel .header a.more:hover i {
+  transform: translateX(0.08rem);
+}
+.recommend-doctor .body,
+.question .body,
+.apparel .body {
+  padding: 0 0.2rem;
+  height: 10.9rem;
+  overflow-y: hidden;
+}
+.recommend-doctor .body {
+  height: 6.1rem;
+}
+.recommend-doctor .body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.recommend-doctor .body ul li a {
+  display: flex;
+  gap: 0.2rem;
+}
+.recommend-doctor .body ul li a .left img {
+  width: 1.3rem;
+}
+.recommend-doctor .body ul li a .right {
+  padding-top: 0.15rem;
+}
+.recommend-doctor .body ul li a .right .card-title,
+.recommend-doctor .body ul li a .right .secondary-title {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.recommend-doctor .body ul li a .right .card-title .name {
+  font-size: 0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.recommend-doctor .body ul li a .right .secondary-title {
+  margin: 0.05rem 0;
+}
+.recommend-doctor .body ul li a .right .secondary-title .score {
+  height: 0.3rem;
+}
+.recommend-doctor .body ul li a .right .secondary-title .visit-time {
+  color: gray;
+}
+.recommend-doctor .body ul li a .right .secondary-title .visit-time span {
+  margin-right: 0.06rem;
+  color: #007AFF;
+}
+.recommend-doctor .body ul li a .right .speciality {
+  color: gray;
+  font-size: 0.35rem;
+}
+.recommend-doctor .body ul li a .right .speciality::before {
+  margin-right: 0.2rem;
+  content: '擅长:';
+  font-size: 1.05em;
+  color: #000;
+}
+.apparel {
+  position: relative;
+  overflow: hidden;
+}
+.apparel a.apparel-more {
+  position: absolute;
+  left: 0.4rem;
+  bottom: 0.2rem;
+}
+.apparel img {
+  height: 2.9065rem;
+}
+.question {
+  margin-bottom: 1.3rem;
+}
+.question .classification {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.1rem;
+}
+.question .classification .item {
+  padding: 0.1rem 0.4rem;
+  border-radius: 999rem;
+  background-color: #f3f6ff;
+  color: #B3BCCC;
+  letter-spacing: 0.1em;
+}
+.question .classification .item.active {
+  background: var(--btn-bg);
+  box-shadow: var(--btn-shadow);
+  color: #fff;
+}
+.question .body {
+  margin-top: 0.5rem;
+}
+.question .body .question-list .question-item {
+  padding: 0.3rem 0.2rem;
+}
+.question .body .question-list .question-item .question-title {
+  font-size: 0.4rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.question .body .question-list .question-item .question-text {
+  margin: 0.15rem 0;
+  color: #606672;
+}
+.question .body .question-list .question-item .ft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question .body .question-list .question-item .ft .left {
+  color: #5b84f0;
+}
+.question .body .question-list .question-item .ft .left img,
+.question .body .question-list .question-item .ft .left span {
+  margin-left: -0.35rem;
+}
+.question .body .question-list .question-item .ft .left span:first-of-type {
+  margin-right: 0.3rem;
+}
+.question .body .question-list .question-item .ft a.right {
+  background: var(--btn-bg);
+  padding: 0.11rem 0.3rem;
+  border-radius: 999rem;
+  box-shadow: var(--btn-shadow);
+  color: #fff;
+}
+.question .body .question-list .question-item .ft a.right:active {
+  box-shadow: var(--btn-shadow-active);
+  transform: translateY(0.08rem);
+}
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80

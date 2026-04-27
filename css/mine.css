@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 个人中心页样式 - Mine Page Styles */
 
 /* ========== 用户信息区域 ========== */
@@ -326,4 +327,9 @@
       transform: scale(0.99);
     }
   }
+=======
+html body {
+  padding-bottom: 21.8rem;
+  background-image: url(/img/mine/bg.png);
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
 }

@@ -1,0 +1,513 @@
+.title {
+  position: relative;
+
+  margin-top: .9rem;
+
+  .pharmacy {
+    position: absolute;
+
+    display: flex;
+    align-items: end;
+
+    margin-top: 0.1rem;
+    height: 100%;
+
+    font-size: .5rem;
+
+    .left {
+      margin-left: 0.2rem;
+
+      font-size: 1.11em;
+    }
+
+    .location {
+      margin-left: 0.12rem;
+
+      i {
+        margin-left: -0.13rem;
+      }
+    }
+  }
+}
+
+
+.searchBox {
+  position: relative;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: .9rem;
+  width: 100%;
+  // background-color: pink;
+
+  i {
+    color: #d4d8e6;
+  }
+
+  .searchInput {
+    padding-left: 1.1rem;
+
+    height: 100%;
+    width: 78%;
+
+    border-radius: 999rem;
+    border: none;
+    background-color: #fff;
+
+    font-size: 0.35rem;
+  }
+
+  .searchBtn {
+    position: absolute;
+    left: .85rem;
+
+    display: flex;
+
+    i {
+      font-size: .5rem;
+    }
+  }
+
+  .right {
+    font-size: .9rem;
+
+    &:hover {
+      transform: translateY(-.05rem);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.tools {
+  position: relative;
+
+  padding: 0.3rem 0 .4rem;
+  border-radius: 0.25rem;
+
+  background-color: #fff;
+
+
+  ul.row {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+
+      &:hover {
+        color: var(--main-color);
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // width: 1.4rem;
+        // height: 1.2rem;
+
+        img {
+          // width: 100%;
+          // height: 100%;
+          height: 1.2rem;
+        }
+
+        p {
+          margin-top: 0.15rem;
+
+          text-wrap: nowrap;
+          font-size: 0.32rem;
+        }
+      }
+    }
+
+    &:last-of-type {
+      // margin: .45rem .61rem;
+      margin: 0.4rem .2rem .1rem;
+
+      a {
+        // width: 1rem;
+        // height: 1rem;
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    bottom: .2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1.1rem;
+    background-color: rgba(20, 70, 204, .3);
+    border-radius: 999rem;
+
+    .left {
+      height: 0.07rem;
+      width: 50%;
+      background-color: rgb(20, 70, 204);
+      border-radius: 999rem;
+    }
+  }
+}
+
+
+.appointment {
+  padding: 0.11rem;
+  border-radius: 0.15rem;
+  background-color: #fff;
+
+  ul {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -0.3rem;
+      width: 2.5rem;
+    }
+
+    li {
+      position: relative;
+
+      border-radius: .2955rem;
+      box-shadow: var(--bs-active-shadow);
+
+
+      &:nth-child(2) {
+        overflow: hidden;
+
+        &+img {
+          // position: absolute;
+          // z-index: 2;
+          // left: 50%;
+          // transform: translateX(-50%);
+          // bottom: -0.3rem;
+          // width: 2.5rem;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-.05rem);
+        box-shadow: var(--bs-shadow);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      a {
+        color: #fff;
+        overflow: hidden;
+
+        p,
+        a {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+
+          text-wrap: nowrap;
+        }
+
+        .title {
+          margin: 0;
+
+          top: .3rem;
+          font-size: 1.6em;
+          font-weight: bold;
+          letter-spacing: .1em;
+
+          text-shadow: var(--xiaomi-shadow);
+        }
+
+        .description {
+          top: 1.25rem;
+          font-size: 1.1em;
+        }
+
+        img {
+          &.bg {
+            width: 3rem;
+          }
+
+          &.icon {
+            position: absolute;
+            z-index: 1;
+
+            &#yygh-icon {
+              left: 50%;
+              bottom: 0;
+              transform: translateX(-50%);
+
+              height: 2.8rem;
+            }
+
+            &#xxyy-icon {
+              height: 3.8rem;
+
+              right: -0.3rem;
+              bottom: -0.5rem;
+            }
+
+            &#zjjj-icon {
+              width: 100%;
+
+              right: -0.01rem;
+              bottom: -.11rem;
+            }
+          }
+
+          &.btn {
+            // position: absolute;
+            // z-index: 2;
+            // left: 50%;
+            // transform: translateX(-50%);
+            // bottom: -0.3rem;
+            // width: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.recommend-doctor,
+.question,
+.apparel {
+  background-color: #fff;
+  border-radius: 0.2rem;
+
+  padding: .25rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // padding: .2rem;
+    margin-bottom: 0.2rem;
+
+    p {
+      position: relative;
+
+      background: url(/img/index/recommend-doctor/header-bg.png) no-repeat;
+      background-position: left 61%;
+      background-size: contain;
+
+      font-size: .4rem;
+      letter-spacing: .1em;
+    }
+
+    a.more {
+      display: flex;
+      align-items: center;
+      gap: 0.05rem;
+
+      &:hover {
+        color: var(--main-color);
+
+        i {
+          transform: translateX(0.08rem);
+        }
+      }
+    }
+  }
+
+  .body {
+    padding: 0 .2rem;
+    height: 10.9rem;
+
+    // overflow-y: auto;
+    overflow-y: hidden;
+  }
+}
+
+
+.recommend-doctor {
+  .body {
+    height: 6.1rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+
+      li {
+        a {
+          display: flex;
+          gap: 0.2rem;
+
+          .left {
+
+            img {
+              width: 1.3rem;
+            }
+          }
+
+          .right {
+            padding-top: 0.15rem;
+
+            .card-title,
+            .secondary-title {
+              display: flex;
+              align-items: center;
+              gap: 0.35rem;
+            }
+
+            .card-title {
+              .name {
+                font-size: 0.4rem;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+              }
+            }
+
+            .secondary-title {
+              margin: 0.05rem 0;
+
+              .score {
+                height: 0.3rem;
+                // background-color: pink;
+              }
+
+              .visit-time {
+                color: gray;
+
+                span {
+                  margin-right: 0.06rem;
+                  color: #007AFF;
+                }
+              }
+            }
+
+            .speciality {
+              color: gray;
+              font-size: 0.35rem;
+
+              &::before {
+                margin-right: 0.2rem;
+
+                content: '擅长:';
+
+                font-size: 1.05em;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.apparel {
+  position: relative;
+
+  overflow: hidden;
+
+  a.apparel-more {
+    position: absolute;
+    left: 0.4rem;
+    bottom: 0.2rem;
+  }
+
+  img {
+    height: 2.9065rem;
+  }
+}
+
+
+.question {
+  margin-bottom: 1.3rem;
+
+  .classification {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 0.1rem;
+
+    .item {
+      padding: .1rem 0.4rem;
+      border-radius: 999rem;
+      background-color: #f3f6ff;
+
+      color: #B3BCCC;
+      letter-spacing: .1em;
+
+      &.active {
+        background: var(--btn-bg);
+        box-shadow: var(--btn-shadow);
+        color: #fff;
+      }
+    }
+  }
+
+  .body {
+    margin-top: 0.5rem;
+
+    .question-list {
+      .question-item {
+        padding: .3rem 0.2rem;
+        // background-color: pink;
+
+        .question-title {
+          // font-weight: bold;
+          font-size: 0.4rem;
+          font-weight: bold;
+          letter-spacing: .1em;
+        }
+
+        .question-text {
+          margin: .15rem 0;
+          color: #606672;
+        }
+
+        .ft {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .left {
+            color: rgba(91, 132, 240, 1);
+
+            img,
+            span {
+              margin-left: -0.35rem;
+            }
+
+            span:first-of-type {
+              margin-right: 0.3rem;
+            }
+          }
+
+          a.right {
+            background: var(--btn-bg);
+            padding: 0.11rem .3rem;
+            border-radius: 999rem;
+            box-shadow: var(--btn-shadow);
+
+            color: #fff;
+
+            &:active {
+              box-shadow: var(--btn-shadow-active);
+              transform: translateY(.08rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

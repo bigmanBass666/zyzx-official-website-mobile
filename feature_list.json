@@ -103,7 +103,7 @@
         "实现底部 TabBar",
         "E2E test: 验证商品卡片显示、价格格式、标签正确渲染"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 7,
@@ -118,7 +118,7 @@
         "实现底部操作栏（客服、收藏、立即购买）",
         "E2E test: 点击数量选择器，验证价格计算；点击购买验证反馈"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 8,
@@ -131,7 +131,7 @@
         "实现 TabBar 联动",
         "E2E test: 点击 Tab 切换，验证列表内容变化；点击点赞按钮验证状态"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 9,
@@ -146,7 +146,7 @@
         "实现底部 TabBar 高亮",
         "E2E test: 点击各功能入口验证跳转功能"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 10,
@@ -160,7 +160,7 @@
         "实现空状态（无订单时显示）",
         "E2E test: 切换不同状态 Tab，验证订单列表筛选；点击操作按钮验证功能"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 11,
@@ -175,7 +175,7 @@
         "实现底部提交按钮（固定定位）",
         "E2E test: 验证价格计算逻辑，点击提交验证订单创建成功"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 12,
@@ -189,7 +189,7 @@
         "实现清除缓存功能（localStorage 清理）",
         "E2E test: 点击退出账号验证登录态清除；清除缓存检查存储清理"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": 13,

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>智能识别</title>
+
+
+	<!-- bootstrap.css -->
+	<link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.css">
+
+	<!-- 字体图标 -->
+	<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/camera.css">
+</head>
+
+<body>
+	<video id="media" autoplay></video>
+
+	<div id="backBtn"><i class="iconfont icon-back"></i></div>
+
+	<div class="line"></div>
+
+	<div class="text">
+		<p>AI中草药智能识别</p>
+	</div>
+
+	<label for="file" id="fileBtn"><i class="iconfont icon-photo-album"></i></label>
+	<input type="file" accept="image/*" id="file" name="file">
+
+
+	<script>
+		const media = document.getElementById('media')	// video元素
+
+		// navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(stream => { // 请求不带任何参数的视频和音频
+		navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: 'environment' } }, audio: false }).then(stream => { // 移动设备，指定使用后置摄像头
+			// 将视频流设置为video元素的源
+			media.srcObject = stream
+			// 低版本浏览器
+			// media.src = window.URL.createObjectURL(stream)
+			media.play()
+		})
+	</script>
+	<script src="/js/common.js"></script>
+</body>
+
+</html>

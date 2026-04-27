@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>意见反馈 - 中医智行</title>
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <!-- 设计系统样式 -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- 页面特定样式 -->
+  <link rel="stylesheet" href="/css/feedback.css">
+
+  <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- 页面主内容区 -->
+  <main id="app">
+    <!-- 顶部导航 -->
+    <header class="location-bar">
+      <button class="back-btn" onclick="window.history.back()">
+        <i class="iconfont icon-arrow-left"></i>
+      </button>
+      <div class="title">意见反馈</div>
+      <button class="search-btn" style="visibility: hidden;">
+        <i class="iconfont icon-search"></i>
+      </button>
+    </header>
+
+    <!-- 反馈表单 -->
+    <section class="feedback-section">
+      <div class="form-group">
+        <label class="form-label">
+          反馈内容 <span class="required">*</span>
+        </label>
+        <div class="textarea-wrapper">
+          <textarea
+            class="feedback-textarea"
+            id="feedbackText"
+            placeholder="请详细描述您的问题或建议，我们会认真对待每一条反馈~"
+            maxlength="500"
+          ></textarea>
+          <div class="char-count">
+            <span id="currentCount">0</span>/500
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          联系方式（选填）
+        </label>
+        <div class="input-wrapper">
+          <input
+            type="tel"
+            class="phone-input"
+            id="phoneInput"
+            placeholder="请输入手机号，方便我们与您联系"
+            maxlength="11"
+          >
+        </div>
+        <p class="form-hint">您的手机号仅用于反馈沟通，不会泄露给第三方</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">反馈类型（选填）</label>
+        <div class="tag-selector">
+          <button class="tag-btn active" data-type="bug">功能缺陷</button>
+          <button class="tag-btn" data-type="improvement">功能建议</button>
+          <button class="tag-btn" data-type="content">内容问题</button>
+          <button class="tag-btn" data-type="other">其他</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">截图上传（选填）</label>
+        <div class="image-uploader">
+          <div class="upload-area" id="uploadArea">
+            <i class="iconfont icon-camera"></i>
+            <p>点击上传截图</p>
+            <span class="hint">最多上传 3 张</span>
+          </div>
+          <div class="preview-area" id="previewArea" style="display: none;">
+            <!-- 图片预览将动态添加到这里 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部占位 -->
+    <div class="bottom-placeholder"></div>
+  </main>
+
+  <!-- 底部提交栏 -->
+  <footer class="submit-bar">
+    <button class="btn-submit" id="submitBtn" disabled>提交反馈</button>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+  <script src="/js/feedback.js"></script>
+</body>
+
+</html>

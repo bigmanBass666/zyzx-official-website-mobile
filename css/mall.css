@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 商城样式 - Mall Page Styles */
 
 /* ========== 顶部定位栏（药店模式）========== */
@@ -191,4 +192,9 @@
       }
     }
   }
+=======
+html body {
+  padding-bottom: 21rem;
+  background-image: url(/img/mall/bg.png);
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
 }

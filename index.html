@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>中医智行</title>
 
@@ -13,10 +14,28 @@
   <link rel="stylesheet" href="/css/main.css">
 
   <!-- 页面特定样式 -->
+=======
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中医智行</title>
+
+  <!-- bootstrap.css -->
+  <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.css">
+
+  <!-- driver.css -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/driver.js/0.9.8/driver.min.css" rel="stylesheet">
+
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="/iconfont/iconfont.css">
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/common.css">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
   <link rel="stylesheet" href="/css/index.css">
 
   <link rel="shortcut icon" href="https://p1.music.126.net/1lqMPskW7B75S1Km452I_Q==/18762066417668140.jpg?param=130y130"
     type="image/x-icon">
+<<<<<<< HEAD
 </head>
 
 <body>
@@ -173,43 +192,301 @@
       </div>
       <div class="question-list">
         <div class="question-item">
+=======
+
+  <script>
+    // 检测屏幕宽度并进行跳转
+    function redirectToMobileOrDesktop() {
+      // 获取屏幕宽度
+      const screenWidth = window.innerWidth || document.documentElement.clientWidth
+
+      // 设置阈值来判断移动设备与桌面设备的界限，这里假设小于等于 768px 为移动设备
+      const threshold = 768
+
+      // 如果屏幕宽度小于等于阈值，跳转至移动端网站
+      if (screenWidth >= threshold) {
+        window.location.href = 'https://zyzx.netlify.app'
+      }
+    }
+
+    redirectToMobileOrDesktop()
+
+
+    
+    // 在DOM加载完成后调用函数
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   redirectToMobileOrDesktop()
+    // });
+  </script>
+</head>
+
+<body>
+  <!-- 标题 -->
+  <div class="title">
+    <div class="pharmacy">
+      <i class="iconfont icon-pharmacy left"></i>
+      <div class="location">汕尾
+        <i class="iconfont icon-arrow-down-fill"></i>
+      </div>
+    </div>
+    <img src="/img/logo_white.png" alt="" class="brand">
+    <!-- 中药商城 -->
+  </div>
+
+
+  <!-- 搜索框 -->
+  <div class="searchBox">
+    <input type="text" placeholder="搜索医院或药品" class="searchInput left" id="searchInput">
+    <label for="searchInput" class="searchBtn"><i class="iconfont icon-search"></i></label>
+    <i class="iconfont icon-msg right"></i>
+  </div>
+
+
+  <!-- 智能问诊, 健康查询等 -->
+  <div class="tools">
+    <ul class="row">
+      <li class="tool-item znwz">
+        <a href="/html/znwz.html" class="tool-link">
+          <img src="/img/index/tool/znwz.png" alt="">
+          <p>智能问诊</p>
+        </a>
+      </li>
+      <li class="tool-item jkzx">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/jkzx.png" alt="">
+          <p>健康咨询</p>
+        </a>
+      </li>
+      <li class="tool-item znpf">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/znpf.png" alt="">
+          <p>智能配方</p>
+        </a>
+      </li>
+      <li class="tool-item znsb">
+        <a href="/html/camera.html" class="tool-link">
+          <img src="/img/index/tool/znsb.png" alt="">
+          <p>智能识别</p>
+        </a>
+      </li>
+    </ul>
+    <ul class="row">
+      <li class="tool-item bad yfjc">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/yfjc.png" alt="" class="">
+          <p>药方检测</p>
+        </a>
+      </li>
+      <li class="tool-item bad jkzc">
+        <a href="/html/jkzc.html" class="tool-link">
+          <img src="/img/index/tool/jkzc.png" alt="" class="">
+          <p>健康自测</p>
+        </a>
+      </li>
+      <li class="tool-item bad xljk">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/xljk.png" alt="" class="">
+          <p>心理健康</p>
+        </a>
+      </li>
+      <li class="tool-item bad smzs">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/smzs.png" alt="" class="">
+          <p>睡眠助手</p>
+        </a>
+      </li>
+      <li class="tool-item bad jbdt">
+        <a href="/html/todo.html" class="tool-link">
+          <img src="/img/index/tool/jbdt.png" alt="" class="">
+          <p>疾病动态</p>
+        </a>
+      </li>
+    </ul>
+    <div class="slider">
+      <div class="left"></div>
+    </div>
+  </div>
+
+
+  <!-- 预约挂号, 线下预约等 -->
+  <div class="appointment">
+    <ul class="row">
+      <li>
+        <a href="/html/todo.html">
+          <p class="title">预约挂号</p>
+          <p class="description">节约时间</p>
+          <img src="/img/index/appointment/yygh-bg.png" alt="" id="yygh-bg" class="bg">
+          <img src="/img/index/appointment/yygh-icon.png" alt="" id="yygh-icon" class="icon">
+          <img src="img/index/appointment//yygh-btn.png" alt="" class="btn">
+        </a>
+      </li>
+      <li>
+        <a href="/html/todo.html">
+          <p class="title">线下预约</p>
+          <p class="description">精准治疗</p>
+          <img src="/img/index/appointment/xxyy-bg.png" alt="" id="xxyy-bg" class="bg">
+          <img src="/img/index/appointment/xxyy-icon.png" alt="" id="xxyy-icon" class="icon">
+        </a>
+      </li>
+      <img src="img/index/appointment//yygh-btn.png" alt="" class="btn">
+      <li>
+        <a href="/html/zjwz.html">
+          <p class="title">专家讲解</p>
+          <p class="description">知识拓宽</p>
+          <img src="/img/index/appointment/zjjj-bg.png" alt="" class="bg">
+          <img src="/img/index/appointment/zjjj-icon.png" alt="" id="zjjj-icon" class="icon">
+          <img src="img/index/appointment//yygh-btn.png" alt="" class="btn">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- 推荐医生 -->
+  <div class="recommend-doctor">
+    <div class="header">
+      <p>推荐医生</p>
+      <a href="/html/todo.html" class="more">更多 <i class="iconfont icon-arrow-right"></i></a>
+    </div>
+
+    <div class="body">
+      <ul>
+        <li>
+          <a href="/html/todo.html">
+            <div class="left">
+              <img src="/img/index/recommend-doctor/jyy.png" alt="">
+            </div>
+            <div class="right">
+              <h5 class="card-title">
+                <div class="name">江园园</div>
+                <div class="department">主任医师 | 妇科</div>
+              </h5>
+              <div class="secondary-title">
+                <img class="score" src="/img/index/recommend-doctor/stars.png"></img>
+                <div class="visit-time"><span>3600</span>次接诊</div>
+              </div>
+              <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
+                失调疾病，复发性流产，妇科炎性疾病...</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/html/todo.html">
+            <div class="left">
+              <img src="/img/index/recommend-doctor/jyy.png" alt="">
+            </div>
+            <div class="right">
+              <h5 class="card-title">
+                <div class="name">江园园</div>
+                <div class="department">主任医师 | 妇科</div>
+              </h5>
+              <div class="secondary-title">
+                <img class="score" src="/img/index/recommend-doctor/stars.png"></img>
+                <div class="visit-time"><span>3600</span>次接诊</div>
+              </div>
+              <p class="speciality">擅长于中西医结合治疗不孕不育症，妇科内分泌
+                失调疾病，复发性流产，妇科炎性疾病...</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 智能穿戴 -->
+  <div class="apparel">
+    <a href="/html/todo.html">
+      <img src="/img/index/apparel/bg.png" alt="">
+    </a>
+  </div>
+
+
+  <!-- 热门问题 -->
+  <div class="question">
+    <div class="header">
+      <p>热门问题</p>
+      <a href="/html/todo.html" class="more">查看全部 <i class="iconfont icon-arrow-right"></i></a>
+    </div>
+
+    <div class="classification">
+      <div class="item active">育儿</div>
+      <div class="item">养生</div>
+      <div class="item">问诊</div>
+      <div class="item">保健</div>
+      <div class="item">减肥</div>
+    </div>
+
+    <div class="body">
+      <ul class="question-list">
+        <li class="question-item">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
           <h5 class="question-title">宝宝辅食怎么做?</h5>
           <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
           <div class="ft">
             <div class="left">
+<<<<<<< HEAD
               <img src="/img/index/question/upvote.png" alt="点赞">
               <span>3930</span>
               <img src="/img/index/question/star.png" alt="收藏">
+=======
+              <img src="/img/index/question/upvote.png" alt="">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
               <span>4950</span>
             </div>
             <a class="right">我也要提问</a>
           </div>
+<<<<<<< HEAD
         </div>
         <div class="question-item">
+=======
+        </li>
+        <li class="question-item">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
           <h5 class="question-title">经常头疼失眠怎么办?</h5>
           <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
           <div class="ft">
             <div class="left">
+<<<<<<< HEAD
               <img src="/img/index/question/upvote.png" alt="点赞">
               <span>3930</span>
               <img src="/img/index/question/star.png" alt="收藏">
+=======
+              <img src="/img/index/question/upvote.png" alt="">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
               <span>4950</span>
             </div>
             <a class="right">我也要提问</a>
           </div>
+<<<<<<< HEAD
         </div>
         <div class="question-item">
+=======
+        </li>
+        <li class="question-item">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
           <h5 class="question-title">IT工作者如何养生？</h5>
           <div class="question-text">多吃些富含维生素A、C和蛋白质的食物，多喝些茶，多吃水果和蔬菜粗粮。</div>
           <div class="ft">
             <div class="left">
+<<<<<<< HEAD
               <img src="/img/index/question/upvote.png" alt="点赞">
               <span>3930</span>
               <img src="/img/index/question/star.png" alt="收藏">
+=======
+              <img src="/img/index/question/upvote.png" alt="">
+              <span>3930</span>
+              <img src="/img/index/question/star.png" alt="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
               <span>4950</span>
             </div>
             <a class="right">我也要提问</a>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </section>
@@ -227,38 +504,125 @@
   <ul class="tabBar">
     <li class="tabBar-item active">
       <a href="/index.html">
+=======
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- tabBar -->
+  <ul class="tabBar">
+    <li>
+      <a href="/index.html" class="active">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
         <i class="iconfont icon-home"></i>
         <p>首页</p>
       </a>
     </li>
+<<<<<<< HEAD
     <li class="tabBar-item">
       <a href="/html/mall.html">
+=======
+    <li>
+      <a href="/html/mall.html" class="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
         <i class="iconfont icon-mall"></i>
         <p>商城</p>
       </a>
     </li>
+<<<<<<< HEAD
     <li class="tabBar-item">
       <a href="/html/healthy.html">
+=======
+    <li>
+      <a href="/html/healthy.html" class="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
         <i class="iconfont icon-healthy"></i>
         <p>健康</p>
       </a>
     </li>
+<<<<<<< HEAD
     <li class="tabBar-item">
       <a href="/html/community.html">
+=======
+    <li>
+      <a href="/html/community.html" class="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
         <i class="iconfont icon-communitygreen"></i>
         <p>社区</p>
       </a>
     </li>
+<<<<<<< HEAD
     <li class="tabBar-item">
       <a href="/html/mine.html">
+=======
+    <li>
+      <a href="/html/mine.html" class="">
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
         <i class="iconfont icon-mine"></i>
         <p>我的</p>
       </a>
     </li>
   </ul>
 
+<<<<<<< HEAD
   <!-- Scripts -->
   <script type="module" src="/js/main.js"></script>
+=======
+
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+
+
+  <script src="/js/flexible.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/index.js"></script>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/driver.js/0.9.8/driver.min.js"></script>
+
+  <script>
+    const driver = new Driver({
+      nextBtnText: '下一个', // Next button text for this step 下一步按钮的文字
+      prevBtnText: '上一个', // Previous button text for this step 上一步按钮文字
+      doneBtnText: '完成', // Text on the final button 完成按钮的文字
+      allowClose: false, // Whether clicking on overlay should close or not 是否允许点击覆盖阴影关闭 默认允许
+    })
+    // 单个元素
+    // driver.highlight({
+    //   element: '.tool-item.znsb',
+    //   popover: {
+    //     title: '智能识别',
+    //     description: 'AI中草药智能识别',
+    //     position: 'left'
+    //   }
+    // });
+
+    // 多个元素
+    driver.defineSteps([
+      {
+        element: '.tool-item.znwz',
+        popover: {
+          title: '特色功能: 智能问诊',
+          description: 'Body of the popover',
+          position: 'bottom'
+        }
+      },
+      {
+        element: '.tool-item.znsb',
+        popover: {
+          title: '特色功能: 智能识别',
+          description: 'AI中草药智能识别',
+          position: 'bottom-right'
+        }
+      },
+    ])
+    // Start the introduction
+    driver.start();
+  </script>
+>>>>>>> 30ce0435b839d555dbb6e870abdab4d69cb24b80
 </body>
 
 </html>

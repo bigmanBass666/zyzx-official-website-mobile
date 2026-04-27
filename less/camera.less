@@ -1,0 +1,76 @@
+// 铺满屏幕
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#backBtn {
+    position: absolute;
+    top: .6667rem;
+    left: .8667rem;
+
+    i {
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
+// 扫描线, 主题色阴影, 在屏幕中心从上到下扫描, 有动画
+.line {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 999;
+
+    transform: translateX(-50%);
+
+    width: 75%;
+    height: .1rem;
+    border-radius: 50rem;
+
+    background-color: var(--main-color);
+    animation: scan 3s infinite ease;
+
+    @keyframes scan {
+        to {
+            top: 70%;
+            opacity: 0;
+        }
+    }
+}
+
+.text {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: .9rem;
+    color: #fff;
+    text-wrap: nowrap;
+
+    p {
+        text-align: center;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="file"] {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2.5rem;
+    color: #fff;
+
+    i {
+        font-size: 3rem;
+    }
+}

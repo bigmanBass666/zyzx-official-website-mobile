@@ -83,6 +83,22 @@ Next: Feature #5 - Healthy Page
 Progress: 5/21 features completed (23.8%)
 Next: Feature #6 - Mall Homepage (商城首页)
 
+=== Session 4 - Feature #6 (2025-03-16 继续) ===
+✅ Feature #6: 商城首页 - COMPLETED
+  - 完全重写 html/mall.html，采用设计系统结构
+  - 移除 Bootstrap 引用，使用 main.css 和 mall.css
+  - 实现顶部搜索栏（搜索医院或药品 + 个人图标）
+  - 实现分类导航（养生调理、中草药直购、按方抓药、送药到家 - 4个入口）
+  - 实现今日推荐商品网格（6个商品卡片：当归、枸杞、黄芪、人参、金银花、菊花）
+  - 实现优选药材横向滚动列表（5个高级药材：冬虫夏草、鹿茸、阿胶、石斛、灵芝）
+  - 实现底部 TabBar（商城高亮）
+  - E2E verified: 所有模块渲染正确，点击交互正常，无 console errors
+  - Files: css/mall.css, js/mall.js (toast交互、点击处理)
+  - Commit: ffc26e9
+
+Progress: 6/21 features completed (28.6%)
+Next: Feature #7 - Product Detail Page (商品详情页)
+
 === Session End - Ready for Next ===
 
 === Notes ===
